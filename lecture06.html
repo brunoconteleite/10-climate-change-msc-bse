@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Climate Mitigation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bruno Conte" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer-bse.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: center, middle
+
+&lt;style&gt;
+g { color: rgb(0,130,155) }
+r { color: rgb(174,77,41) }
+y { color: rgb(177,148,40) }
+&lt;/style&gt;
+
+# Week 06: The Economics of Climate Change Mitigation
+
+## &lt;img src="https://brunoconteleite.github.io/08-geospatial-ds-bse/figs/bse_primary_logo.png" style="width: 35%" /&gt;&lt;br&gt;&lt;br&gt;Bruno Conte
+
+## 13/Feb/2024
+
+---
+
+# Climate Change and Environmental Policy: Intro
+
+- So far, we have studied &lt;g&gt;economic causes&lt;/g&gt; of climate change (Facts 1 to 3, Class 01)
+
+  - Economic `\(\rightarrow\)` `\(\text{CO}_{2}\)` emissions `\(\rightarrow\)` climate change
+
+--
+    
+- We have also learned how economists integrate the climate in their models
+
+  - Conceptualize how damages can be reduced (mitigated) `\(\rightarrow\)` &lt;y&gt;environmental policies&lt;/y&gt;
+
+  - IAM `\(\rightarrow\)` study the efficiency of `\(\text{CO}_{2}\)` taxes as a mitigation tool
+
+--
+
+`\(\text{ }\)`
+    
+.center[&lt;u&gt;This class:&lt;/u&gt; &lt;r&gt;**why does the economy need policies**&lt;/r&gt; to correct (environmental) inefficiencies?]
+
+1. What are the sources of inefficiencies in an unregulated economy?
+
+2. Why are `\(\text{CO}_{2}\)` taxes so appealing, and are there other available policies?
+
+---
+
+# Climate Change and Environmental Policy: Intro
+
+- Conceptual framework behind &lt;u&gt;environmental policies&lt;/u&gt;
+
+  - Unregulated economy `\(\rightarrow\)` market failures
+  
+  - Different failures lead to different damages - and need &lt;r&gt;different policies&lt;/r&gt;
+  
+  - Distinction between &lt;g&gt;local versus global&lt;/g&gt; policies
+
+--
+
+- &lt;u&gt;Direct intervention&lt;/u&gt;/policies:
+
+  - Can be distortionary: how would them interact with other dimension of the economy?
+  
+  - Can generate benefits (e.g., tax revenues, "nudges")
+  
+- What are the related &lt;y&gt;trade-offs&lt;/y&gt; for `\(\neq\)` policies?
+
+---
+
+# Climate Change and Environmental Policy: Roadmap
+
+.pull-left[
+
+1. &lt;u&gt;Conceptual framework&lt;/u&gt;
+
+  - Introduction to environmental inefficiences (market failures)
+
+2. &lt;u&gt;Environmental Policies in Theory&lt;/u&gt;
+
+  - Pigou versus Coase
+  
+  - Government- vs. Market-based policies
+
+]
+
+.pull-right[
+
+3\. &lt;u&gt;Environmental Policies in Practice&lt;/u&gt;
+
+  - Pigou: `\(\text{CO}_2\)` taxes
+  
+  - Coase: EU ETS system
+
+]
+
+---
+class: inverse, center, middle
+count: false
+
+# Part 1: Why do Markets Fail and Deliver
+
+# Negative Environmental Outcomes?
+
+---
+
+# Market Failures and Environmental Inefficiencies
+
+The &lt;u&gt;First Welfare Theorem&lt;/u&gt;:
+
+&gt; *"An economic equilibrium will be &lt;r&gt;Pareto Optimal&lt;/r&gt;: no further exchange would make one person better off without making another worse off."*
+
+--
+
+This is the idea underneath Adam Smith's &lt;u&gt;Invisible Hand&lt;/u&gt;:
+
+&gt; *"Every individual, by pursuing his &lt;y&gt;own interest&lt;/y&gt;, frequently promotes that of the society &lt;g&gt;more effectually&lt;/g&gt; than when he really intends to promote it."*
+
+--
+
+Yet, the climate is changing
+
+- Why don't individuals promote the (environmental) interest of the global society?
+
+- &lt;u&gt;Answer&lt;/u&gt;: markets fail (e.g., market power, externalities)
+
+---
+
+# Market Failures and Environmental Inefficiencies
+
+## A simple illustration with externalities
+
+.pull-left[
+
+&lt;u&gt;Driving a car&lt;/u&gt;: consumes gasoline
+- `\(PMB=\)` private benefits (demand)
+- `\(PMC=\)` private marginal costs (supply)
+
+
+]
+.pull-right[
+&lt;img src="figs/fig_mkt1.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Market Failures and Environmental Inefficiencies
+
+## A simple illustration with externalities
+
+.pull-left[
+
+&lt;u&gt;Driving a car&lt;/u&gt;: consumes gasoline
+- `\(PMB=\)` private benefits (demand)
+- `\(PMC=\)` private marginal costs (supply)
+
+Burning gas `\(\rightarrow\)` negative externality
+- Consumption ext. `\(\rightarrow SMB \neq PMB\)`
+- Unregulated markets &lt;r&gt;overdemand&lt;/r&gt; gas
+
+&lt;y&gt;Environmental policy&lt;/y&gt;: how to correct incentives?
+
+]
+.pull-right[
+&lt;img src="figs/fig_mkt2.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Market Failures and Environmental Inefficiencies
+
+More broadly, a market outcome is socially inefficient if (one of) the &lt;g&gt;3 assumptions&lt;/g&gt; do not hold
+
+1. Perfect competition
+
+2. Full information (VW's dieselgate)
+
+3. **&lt;y&gt;Complete markets&lt;/y&gt;** (source of most environmental problems!)
+
+--
+
+&gt; *"In &lt;r&gt;complete markets&lt;/r&gt;, all relevant costs and benefits are borne by the market participants (e.g. firms and consumers). It requires:"* 
+
+- No externalities
+
+- Private (versus public) goods
+
+- No tragedy of the commons
+
+---
+
+# Incomplete Markets and Inefficiencies: Externalities
+
+&gt; *An externality results when one's action has a &lt;r&gt;direct, unintentional, and uncompensated effect&lt;/r&gt; on other individuals.*
+
+- Externalities = &lt;u&gt;external aspects&lt;/u&gt; in a transaction.
+
+- A key characteristic: &lt;y&gt;uncompensated&lt;/y&gt; (why?)
+
+--
+
+They can be either &lt;u&gt;consumption or production&lt;/u&gt; based, for example:
+
+- Purchasing the IKEA desk: do we account for (eventually) deforested trees?
+
+- Driving a car (vs. a bus): do we pay for the additional `\(\text{CO}_2\)`?
+
+- &lt;g&gt;Other (production-related) examples?&lt;/g&gt;
+
+&lt;u&gt;Bottomline&lt;/u&gt;: unregulated markets overproduce/consume
+
+---
+
+# Incomplete Markets and Inefficiencies: Public Goods
+
+&gt; *Public goods are &lt;r&gt;non-rival and non-excludable goods&lt;/r&gt; that are underprovided (or overexploited) because of free riding.*
+
+- &lt;u&gt;Non-rival&lt;/u&gt;: additional people can consuming the same unit of the good at no extra cost
+
+- &lt;u&gt;Non-excludable&lt;/u&gt;: extra individuals can't be prevented from consuming the good
+
+|  | Excludable | Non-Excludable |
+| --- | --- | --- |
+| **Rival** | Private goods | Common-pool resources |
+| **Non-Rival** | Parks, Netflix | Public goods (nat. defense) |
+
+--
+
+&lt;u&gt;Bottomline&lt;/u&gt; unregulated markets &lt;g&gt;underprovide&lt;/g&gt; public goods
+
+- Key reason: &lt;y&gt;free riding&lt;/y&gt; (examples)?
+
+---
+
+# Incomplete Markets and Inefficiencies: Tragedy of the Commons
+
+&gt; *The &lt;r&gt;tragedy of the commons&lt;/r&gt; occur when agents selfishly overexploit a non-excludable good without realizing future depletion*
+
+It can arise when goods/resources feature
+
+- Non-excludability, like with public goods
+
+- *&lt;g&gt;Diminishing marginal returns&lt;/g&gt;*, so that the resource is slowly depleted if overused
+
+&lt;u&gt;Canonical example&lt;/u&gt;: the commons (sheep pasture); &lt;y&gt;other examples?&lt;/y&gt;
+
+- Often conceptualized as a prisioner's dillema
+
+&lt;u&gt;Bottomline&lt;/u&gt;: unregulated markets overexploit resources
+
+---
+class: inverse, center, middle
+count: false
+
+# Part 2: Addressing Market Failures: Theory Behind
+
+# Environmental Policy
+
+---
+
+# The Theory Behind Environmental Policy
+
+.pull-left[
+
+Back to the car-driving (gasoline) example
+  - How to correct incentives?
+
+&lt;y&gt;Environmental policy&lt;/y&gt;: *"getting prices right"*
+  - Change preferences towards the socially desirable (environmental) outcome
+  
+&lt;r&gt;Two "opposed" views&lt;/r&gt;:
+  - Pigou (1920), tax externalities
+  - Coase (1960's), private bargaining
+
+Yield &lt;g&gt;the same outcome&lt;/g&gt; (in principle)
+  - Debate about gov. intervention
+
+]
+.pull-right[
+&lt;img src="figs/fig_mkt2.png" style="width: 100%" /&gt;
+]
+
+---
+
+# The Theory Behind Environmental Policy
+
+.pull-left[
+
+&lt;u&gt;Pigou&lt;/u&gt;: &lt;r&gt;tax the externality&lt;/r&gt;!
+- Agents internalize damages
+
+Other advantages (later):
+- Raises fiscal capacity
+- Correct other distortions
+
+&lt;u&gt;Coase&lt;/u&gt;: argument for &lt;g&gt;no intervention&lt;/g&gt;
+- How to measure damages (and tax)?
+- Can't markets transactions solve the problem?
+
+]
+.pull-right[
+&lt;img src="figs/fig_mkt3.png" style="width: 100%" /&gt;
+]
+
+---
+
+# The Theory Behind Environmental Policy: The Coase Theorem
+
+Ronald Coase (1910-2013): *"The Problem of Social Cost"* argues that, if there are
+1. No wealth effects on demand
+2. No transaction costs
+3. Well-defined and enforceable property rights
+
+&gt; *"The optimal economic allocation will take place under &lt;r&gt;private bargaining&lt;/r&gt; between affected actors"*
+
+In other words, agents must be able to pay/be compensated for the effect of exernalities
+
+- That is, the role of the government is to &lt;g&gt;create these markets&lt;/g&gt;!
+
+--
+
+Reasonable theory in &lt;y&gt;specific contexs&lt;/y&gt; (farmer and rancher)
+
+- Assumptions 2 and 3 can be farfetched in current problems (e.g., industrial pollution)
+
+- Yet, **very influential** theory that inspired many real-world (cap-and-trade) policies
+
+---
+
+# Real-World Environmental Policies
+
+Despite Coase’s concerns, many economists do see a &lt;g&gt;role for government&lt;/r&gt;
+- How should it do so?
+
+We will contrast two &lt;r&gt;different approaches&lt;/r&gt;
+
+1. &lt;u&gt;Market-based policies&lt;/u&gt;
+  - Emission tax (Pigou) versus Emission Trading (Coase)
+  
+2. &lt;u&gt;Direct regulation&lt;/u&gt;
+  - Command-and-control
+  - Standards
+  - Subsidies
+  - ...
+
+---
+class: inverse, center, middle
+count: false
+
+# Part 3.A: Real-World Environmental
+
+# Policies: Carbon Taxes
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+Let us now think global warming caused by &lt;g&gt;production externalities&lt;/g&gt; (e.g., GHG emissions)
+
+.pull-left[
+
+&lt;u&gt;Economy&lt;/u&gt;:
+- Demand = Private Benefits `\((PMB)\)`
+- Supply = Private Costs `\((PMC)\)`
+- Externalities = Marg. Damages `\((MD)\)`
+
+&lt;u&gt;Unregulated economy&lt;/u&gt; `\(\rightarrow Q^U\)`
+
+What if &lt;r&gt;externalities&lt;/r&gt; are accounted for?
+
+]
+.pull-right[
+&lt;img src="figs/fig_mkt4.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+Let us now think global warming caused by &lt;g&gt;production externalities&lt;/g&gt; (e.g., GHG emissions)
+
+.pull-left[
+
+&lt;r&gt;Social Mg. Costs&lt;/r&gt; `\((SMC)=PMC+MD\)`
+- That is, the supply accounting for social damages
+
+No consumption externalities
+- `\(SMB = PMB=\)` private demand
+
+&lt;u&gt;Social optimal:&lt;/u&gt; `\(SMC = SMB\)`
+- `\(Q^U &gt; Q^S\)`; i.e., economy overproduces
+- Disregards (social) damages of GHG
+
+]
+.pull-right[
+&lt;img src="figs/fig_mkt5.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+Let us now think global warming caused by &lt;g&gt;production externalities&lt;/g&gt; (e.g., GHG emissions)
+
+.pull-left[
+
+&lt;u&gt;Pigouvian tax:&lt;/u&gt; aligns private and social incentives
+
+&gt; "*The Pigouvian tax &lt;r&gt;narrows the gap&lt;/r&gt; between the private and social costs of carbon*"
+
+What does that mean? It &lt;y&gt;gets prices right&lt;/y&gt;
+- Shifts (private) supply to account for social damages
+
+&lt;u&gt;Pigouvian tax&lt;/u&gt; `\(=MD(Q^S)\)`
+- How to measure it in reality?
+
+]
+.pull-right[
+&lt;img src="figs/fig_mkt6.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+The &lt;r&gt;Social Cost of Carbon&lt;/r&gt;: effort from scientific community since early 1990s
+
+--
+
+.pull-left[
+
+For example, Barrage and Nordhaus (2023)
+- `\(SCC = (d W / d E_t) / (dW / dC_t)\)`
+- Maps `\(\text{CO}_2 \rightarrow\)` economic units (US$)
+- Growth dynamics `\(\rightarrow\)` time-varying SCC
+
+&lt;u&gt;Crucial inputs&lt;/u&gt;:
+- Damage function
+- &lt;g&gt;Discount rates&lt;/g&gt;
+
+]
+.pull-right[
+&lt;img src="figs/scc_barragenordhaus.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+The &lt;r&gt;Social Cost of Carbon&lt;/r&gt;: effort from scientific community since early 1990s
+
+.pull-left[
+
+For example, Barrage and Nordhaus (2023)
+- `\(SCC = (d W / d E_t) / (dW / dC_t)\)`
+- Maps `\(\text{CO}_2 \rightarrow\)` economic units (US$)
+- Growth dynamics `\(\rightarrow\)` time-varying SCC
+
+&lt;u&gt;Crucial inputs&lt;/u&gt;:
+- Damage function
+- &lt;g&gt;Discount rates&lt;/g&gt; (Golosov et al., 2014)
+
+]
+.pull-right[
+&lt;img src="figs/scc_golosov.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+An immense literature provides &lt;r&gt;alternative estimates&lt;/r&gt; for SCC since eraly 1990s
+
+.pull-left[
+
+Tol (2011) *"The Social Cost of Carbon"*
+- Meta analysis across numerous studies
+
+&lt;g&gt;Increasing pattern&lt;/g&gt; on SCC estimates
+- Improved frameworks (IAM)
+- Better climate damage estimates
+
+]
+.pull-right[
+&lt;img src="figs/scc_tol1.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+An immense literature provides &lt;r&gt;alternative estimates&lt;/r&gt; for SCC since eraly 1990s
+
+.pull-left[
+
+Tol (2011) *"The Social Cost of Carbon"*
+- Meta analysis across numerous studies
+
+&lt;g&gt;Increasing pattern&lt;/g&gt; on SCC estimates
+- Improved frameworks (IAM)
+- Better climate damage estimates
+
+Tol (2022) *"Estimates of the SCC have increased over time"*
+- Continued `\(\uparrow\)` trend
+
+]
+.pull-right[
+&lt;img src="figs/scc_tol2.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+An immense literature provides &lt;r&gt;alternative estimates&lt;/r&gt; for SCC since eraly 1990s
+
+.pull-left[
+
+Tol (2011) *"The Social Cost of Carbon"*
+- Meta analysis across numerous studies
+
+&lt;g&gt;Increasing pattern&lt;/g&gt; on SCC estimates
+- Improved frameworks (IAM)
+- Better climate damage estimates
+
+Tol (2022) *"Estimates of the SCC have increased over time"*
+- Continued `\(\uparrow\)` trend
+
+]
+.pull-right[
+&lt;img src="figs/scc_tol3.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+&lt;u&gt;Lecture 03&lt;/u&gt; (Climate Impacts): recent &lt;g&gt;improvement on climate damage measures&lt;/g&gt;
+
+- &lt;r&gt;Nordhaus's&lt;/r&gt; 1990s-2010s (economic) damage function (quadratic damages)
+
+- Recent &lt;y&gt;multi-dimensional&lt;/y&gt; projects
+
+  - Climate Impact Lab, Peseta Project
+  
+Remaining gaps: non-market damages, &lt;g&gt;non-temperature effects&lt;/g&gt;, adaptation, ...
+
+- On adaptation: *"Valuing the Global Mortality Consequences of Climate Change Accounting for Adaptation Costs and Benefits"* (Carleton et al., 2023)
+
+Yet, there is a consensus about the efficiency (and necessity) of `\(\text{CO}_2\)` tax in the economy
+
+- Next: final comments on side-advantages and (eventual) limitations
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+## Side Advantages of Carbon Taxes: the Double Dividend Theory
+
+&gt; *"Environmental taxes can reduce both pollution and the overall economic costs associated with the tax system by using its revenue to &lt;r&gt;displace other more distortionary taxes&lt;/r&gt;."*
+
+This is a second-best argument applied to the real world (Goulder, 1995; Goulder et al., 1997)
+
+- Many other (distortionary) taxes are in place (income, corporate, ...)
+
+- By taxing emissions, a policymaker achieves the desired environmental goal &lt;y&gt;and raise tax revenues&lt;/y&gt;
+
+- This additional revenue can relax the need of government financing
+
+Elusive theoretical results: can data show otherwise?
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+## Limitations: delaying versus reducing emissions
+
+.pull-left[
+
+Carbon taxes `\(\downarrow\)` the rate of emissions
+
+Cruz and Rossi-Hansberg (2023) *"The Economic Geography of Global Warming"*
+
+- Carbon taxes flattens emissions' cruve
+
+- That is, it &lt;r&gt;delays emissions&lt;/r&gt;
+
+- Efficient results &lt;y&gt;if complemented with innovation&lt;/y&gt; (abatement technology)
+
+]
+.pull-right[
+&lt;img src="figs/cotax_cruz1.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+## Limitations: delaying versus reducing emissions
+
+.pull-left[
+
+Carbon taxes `\(\downarrow\)` the rate of emissions
+
+Cruz and Rossi-Hansberg (2023) *"The Economic Geography of Global Warming"*
+
+- Carbon taxes flattens emissions' cruve
+
+- That is, it &lt;r&gt;delays emissions&lt;/r&gt;
+
+- Efficient results &lt;y&gt;if complemented with innovation&lt;/y&gt; (abatement technology)
+
+]
+.pull-right[
+&lt;img src="figs/cotax_cruz2.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: emission/carbon taxes
+
+## Limitations: potential barrier to innovation
+
+At &lt;g&gt;micro-scale&lt;/g&gt;, taxing producers can hinder innovation
+
+- Similar argument to corporate taxes
+
+&lt;r&gt;Porter Hypothesis&lt;/r&gt;: would environmental regulation limit (green) innovation
+
+- Or would it crow-out less-efficient firms, keeping only productive/clean industries?
+
+--
+
+Aghion et al. (2016) *"Carbon Taxes, Path Dependency, and Directed Technical Change: Evidence from the Auto Industry"*
+
+- Unveils tradeoffs between short- and long-term effects of regulation in the car industry
+
+- *Their results*: soon in the presentations!
+
+---
+class: inverse, center, middle
+count: false
+
+# Part 3.B: Real-World Environmental
+
+# Policies: Cap-and-Trade
+
+---
+
+# Real-World Environmental Policies: cap-and-trade
+
+&lt;u&gt;The Coase Theorem&lt;/u&gt;: agents can bargain among each other to achieve an efficient outcome
+
+- Property rights are well-defined
+
+- Neglegible transactions costs
+
+In the &lt;r&gt;case of emissions&lt;/r&gt;: who has the property rights over "air"?
+
+- Would the Coase Theorem apply?
+
+- What are the boundaries or "air"?
+
+--
+
+&lt;u&gt;Solution:&lt;/u&gt; cap-and-trade
+
+- Right to pollute `\(\rightarrow\)` property rights over "pollutable air"
+
+- Example: EU Emission Trading Scheme (EU ETS); it covers `\(\sim 45\)`% of EU's emissions 
+
+---
+
+# Real-World Environmental Policies: cap-and-trade
+
+A cap-and-trade system has two elements:
+
+1. &lt;u&gt;A cap&lt;/u&gt;: total quantity that will be allowed to be emitted
+
+2. &lt;u&gt;A market&lt;/u&gt;: allocation of permits that can be traded
+
+It is a clever &lt;g&gt;implementation of Coase's&lt;/g&gt; ideas:
+
+- If frictionless, the allocation of permits will end up with the producers that the society values the most
+
+--
+
+Moreover, it create &lt;r&gt;innovation incentives&lt;/r&gt;
+
+- Permit prices are determined endogenously
+
+- Firms can cut permit costs by innovating
+
+---
+
+# Real-World Environmental Policies: cap-and-trade
+
+## Potential limitation: the Waterbed Effect
+
+--
+
+.pull-left[
+
+Fowlie (2018) *"Carbon Markets, Waterbeds, and You"*
+
+- Can ETS systems make individual climate action innocuous?
+
+Intuition: with a cap, aggregate emissions never change
+
+- That is, prices adjust
+
+Exogenous shift on energy demand (on abatement curve) `\(\downarrow\)` permit prices
+
+]
+.pull-right[
+&lt;img src="figs/ets_waterbed1.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: cap-and-trade
+
+## Potential limitation: the Waterbed Effect
+
+
+.pull-left[
+
+Fowlie (2018) *"Carbon Markets, Waterbeds, and You"*
+
+- Can ETS systems make individual climate action innocuous?
+
+Intuition: with a cap, aggregate emissions never change
+
+- That is, prices adjust
+
+Exogenous shift on energy demand (on abatement curve) `\(\downarrow\)` permit prices
+
+]
+.pull-right[
+&lt;img src="figs/ets_waterbed2.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: cap-and-trade
+
+## Potential limitation: the Waterbed Effect
+
+
+.pull-left[
+
+Real-world carbon markets/ETS are designed to present this effect
+
+- Price floors
+
+- Flexible cap
+
+]
+.pull-right[
+&lt;img src="figs/ets_waterbed2.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Real-World Environmental Policies: taking stock
+
+We discussed two important environmental policies:
+
+&lt;u&gt;Taxing emissions:&lt;/u&gt; implements the Pigouvian idea of internalizing externalities
+
+- *"The most important number you are not aware of"* (Greenstone): `\(\neq\)` methods and SCC estimates `\(\rightarrow\)` USD 100-200/t `\(\text{CO}_2\)`
+
+- Side advantages: double-dividend theory
+
+- Potential limitations: delaying effects, hindering innovation
+
+&lt;u&gt;Cap-and-trade:&lt;/u&gt; clever implementation of Coase Theorem (how?)
+
+- Recently implemented by EU, Chicago's voluntary market did not work out
+
+- Possible waterbed effects require ETS to be constantly fine tunned
+
+---
+class: inverse, center, middle
+count: false
+
+# See you next class!
+
+---
+
+# References
+
+- Goulder, L. H. (1995). Environmental Taxation and the Double Dividend: A Reader’s Guide. International Tax and Public Finance 2 (2), 157–183.
+
+- Goulder, L. H., I. W. H. Parry, and D. Burtraw (1997). Revenue-Raising versus Other Approaches to Environmental Protection: The Critical Significance of Preexisting Tax Distortions. RAND Journal of Economics 28 (4), 708–731
+
+- Meredith Fowlie. April 15, (2018). "Carbon Markets, Waterbeds, and You." Energy Institute at Haas Blog.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
