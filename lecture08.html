@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Trade, Growth, and the Environment</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bruno Conte" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer-bse.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: center, middle
+
+&lt;style&gt;
+g { color: rgb(0,130,155) }
+r { color: rgb(174,77,41) }
+y { color: rgb(177,148,40) }
+&lt;/style&gt;
+
+# Week 08: Trade, Growth, and the Environment
+
+## &lt;img src="https://brunoconteleite.github.io/08-geospatial-ds-bse/figs/bse_primary_logo.png" style="width: 35%" /&gt;&lt;br&gt;&lt;br&gt;Bruno Conte
+
+## 27/Feb/2024
+
+---
+
+# Trade, Growth, and the Environment: Intro
+
+- We previouly studied the failures in markets and economy that lead to negative environmental outcomes
+
+- We have also investigated the tools to address these failures
+
+  - And the &lt;g&gt;environmental policies&lt;/g&gt; aiming at that goal
+  
+- We have also seen that progress on environmental outcomes were &lt;r&gt;below expected&lt;/r&gt; in the past decades
+
+--
+
+&lt;u&gt;This class&lt;/u&gt;: how &lt;y&gt;economic growth and trade liberalization&lt;/y&gt; interact with
+
+  - Stringency and performance of environmental policies?
+  
+  - Resulting environmental outcomes?
+
+--
+  
+&lt;u&gt;Next&lt;/u&gt;: some motivational look at raw data
+
+---
+
+.center[&lt;iframe src="https://ourworldindata.org/grapher/annual-co-emissions-by-region?time=1930..latest" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"&gt;&lt;/iframe&gt;]
+
+---
+
+.center[&lt;iframe src="https://ourworldindata.org/grapher/annual-co-emissions-by-region?stackMode=relative&amp;time=1930..latest" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"&gt;&lt;/iframe&gt;]
+
+---
+
+.center[&lt;iframe src="https://ourworldindata.org/grapher/share-co2-embedded-in-trade" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"&gt;&lt;/iframe&gt;]
+
+---
+
+# Trade, Growth, and the Environment: Intro
+
+The questions we are interested at are:
+
+1. Is there a &lt;g&gt;systematic relationship&lt;/g&gt; between economic growth and environmental quality?
+
+  - Environmental Kuznets Curve
+
+2. What are the sources of &lt;r&gt;environmental quality changes&lt;/r&gt;?
+
+  - Scale, Composition, and Techinique Effects
+
+3. What explains differences in growth-environment paths across the world?
+
+  - Structural change and/or &lt;y&gt;globalization?&lt;/y&gt;
+  
+---
+class: inverse, center, middle
+count: false
+
+# Part 1: Growth, the Environment, and 
+
+# the Environmental Kuznets Curve
+
+---
+
+# Economic Growth and the Environment: Kuznets Curve
+
+- How does economic growth relate to environmental outcomes?
+
+- Is there a &lt;g&gt;tradeoff&lt;/g&gt; between economic growth and environmental resources?
+
+- &lt;u&gt;Important questions&lt;/u&gt;: policies for growth `\(\leftrightarrow\)` environmental quality
+
+- &lt;u&gt;Difficult questions&lt;/u&gt;: countries differ in many dimensions (e.g., institutional quality, preferences for the environmental preservation)
+
+  - Each country faces different constrains &lt;r&gt;as it evolves over time&lt;/r&gt;
+  
+---
+
+# Economic Growth and the Environment: Kuznets Curve
+
+In the early 1990s, Grossman and Krueger (GK) hypothesized
+
+&gt; *"Economic growth brings an initial phase of environmental deterioration followed by a subsequent phase of improvement."*
+
+- Two-phase process: &lt;g&gt;inverted U-shaped relationship&lt;/g&gt; between income per capita and environmental quality in a country
+
+- Such a relationship is referred to in the literature as the "*Environmental Kuznets Curve*" (EKC)
+
+- &lt;u&gt;Inspiration&lt;/u&gt; from the original Kuznets curve: relationship between income per capita and &lt;r&gt;inequality&lt;/r&gt;
+
+---
+
+# Economic Growth and the Environment: Kuznets Curve
+
+How does that look in 1990s? Grossman and Krueger's results:
+
+.pull-left[
+&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/grossman_ekc1.png" style="width: 95%" /&gt;
+]
+.pull-right[
+&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/grossman_ekc2.png" style="width: 95%" /&gt;
+]
+
+---
+
+.center[
+&lt;iframe src="https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"&gt;&lt;/iframe&gt;
+]
+
+---
+
+# Economic Growth and the Environment: Kuznets Curve
+
+Why would the EKC feature a inverse-U shape? &lt;u&gt;Four explanations&lt;/u&gt;:
+
+--
+
+- &lt;u&gt;Sources of growth&lt;/u&gt;: e.g., between capital and human capital
+
+  - Example: manufacturing- to service-based economy
+  
+  - Shift from carbon intense industry is unrelated to environmental policy
+  
+  - Related to process of &lt;g&gt;structural change&lt;/g&gt; (i.e., modernization of the economy)
+
+---
+
+# Economic Growth and the Environment: Kuznets Curve
+
+Why would the EKC feature a inverse-U shape? &lt;u&gt;Four explanations&lt;/u&gt;:
+
+- &lt;u&gt;Income effects&lt;/u&gt;: wealth increase `\(\rightarrow\)` higher demand for environmental quality
+
+  - Unrelated to structural change (i.e. changes in sectoral composition of the economy)
+  
+  - Related to &lt;r&gt;institutional changes&lt;/r&gt; that respond to income and development
+  
+---
+
+# Economic Growth and the Environment: Kuznets Curve
+
+Why would the EKC feature a inverse-U shape? &lt;u&gt;Four explanations&lt;/u&gt;:
+
+- &lt;u&gt;Threshold effects&lt;/u&gt;: abatement (environmental) policies are too costly (e.g., resources, political capital)
+
+  - Not worth abating emissions &lt;g&gt;up to a certain level&lt;/g&gt; (threshold) of pollution
+  
+  - Equivalent to a sunk cost of abatement (e.g., setting environmental agencies)
+  
+- &lt;u&gt;Inreasing returns to abatement&lt;/u&gt;: similar idea; it gets easier to abate &lt;r&gt;as scale increases&lt;/r&gt; (e.g., recycling)
+
+---
+
+# Economic Growth and the Environment: Kuznets Curve
+
+Since GK, the empirical relevance of the EKC has been widely studied. &lt;u&gt;Main limitations&lt;/u&gt;:
+
+- There are many &lt;g&gt;different indicators&lt;/g&gt; of environmental quality
+
+  - Not all pollutants are subject to the same mechanisms behind EKC
+
+- Countries are different, and may over time experience different economic and environmental constrains
+
+  - Hard to predict when and how environmental policies get adopted
+
+For these reasons, the empirical relevance of the EKC has remained &lt;r&gt;somehow inconclusive&lt;/r&gt;
+
+---
+
+# Economic Growth and the Environment: Kuznets Curve
+
+Moreover, EKC theory assumes that countries &lt;g&gt;modernize independently&lt;/g&gt;
+
+But countries grow interdependently, connected by trade linkages
+
+--
+
+- How would the EKC results change in the current &lt;r&gt;globalized economy?&lt;/r&gt;
+
+  - Would international trade `\(\rightarrow\)` more growth and environmental quality?
+
+  - Or would it allow for countries to improve environmental quality &lt;y&gt;at the expense of others?&lt;/y&gt;
+  
+--
+
+For that, we need to learn more about the &lt;u&gt;sources of environmental quality changes&lt;/u&gt;
+
+---
+class: inverse, center, middle
+count: false
+
+# Part 2: Sources of Environmental Quality
+
+# Scale, Composition, and Technique Effects
+
+---
+
+# Scale, Composition, and Technique Effects
+
+Consider an economy with two sectors, say manufacturing and services
+
+- Different emission-intensities; manufacturing `\(\rightarrow\)` "brown sector"
+
+How can this economy change/reduce its emissions?
+
+--
+
+&lt;u&gt;Scale effect&lt;/u&gt;: changes in emission if the economy simple &lt;g&gt;"scales up"&lt;/g&gt;
+
+- More output, more emissions
+
+- Disregards changes in &lt;r&gt;sectoral composition&lt;/r&gt; and technology
+
+- "De-growth" `\(\rightarrow\)` improved environmental quality
+
+---
+
+# Scale, Composition, and Technique Effects
+
+&lt;u&gt;Composition effect&lt;/u&gt;: changes in emission if the economy &lt;g&gt;switches sectors&lt;/g&gt;
+
+- Less manufacturing, more services
+
+- Related to the "source of growth" EKC explanation
+
+- Assumes no changes in aggregate scale and/or &lt;r&gt;technologies&lt;/r&gt;
+
+  - What about innovation making manufacturing less polluting?
+
+--
+
+&lt;u&gt;Technique effect&lt;/u&gt;: changes in emission if the sectors become &lt;y&gt;less emission-intense&lt;/y&gt;
+
+- Allow for composition and scale to remain constant
+
+- Driven purely by technological innovation!
+
+---
+
+# Scale, Composition, and Technique Effects
+
+In reality, all effects should be in place &lt;g&gt;at the same time&lt;/g&gt;!
+
+- How to disentagle the changes in emission per capita across countries over time?
+
+  - Were they techinically changing, or only changing composition (i.e., outsourcing pollution)?
+  
+--
+
+There is evidence for &lt;r&gt;both effects being in place&lt;/r&gt;:
+
+- Shapiro and Walker: "*Why Is Pollution from U.S. Manufacturing Declining?*"
+
+---
+
+# Scale, Composition, and Technique Effects
+
+&lt;u&gt;The US case&lt;/u&gt;: manufacturing output has been increasing remarkably, but &lt;g&gt;emissions decreasing&lt;/g&gt;
+
+.center[&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/fig_shapiro_sct1.png" style="width: 60%" /&gt;]
+
+---
+
+# Scale, Composition, and Technique Effects
+
+Can we separate the role of &lt;u&gt;scale, composition, and technique&lt;/u&gt; effects?
+
+.center[&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/fig_shapiro_sct2.png" style="width: 65%" /&gt;]
+
+---
+
+# Scale, Composition, and Technique Effects
+
+What are the role of &lt;u&gt;scale, composition, and technique&lt;/u&gt; effects?
+
+- Solid green (Scale)
+
+  - Counterfactual emissions if emission intensities and composition of products had been fixed at 1990 levels
+
+- Dashed red (Scale + Composition)
+
+  - Counterfactual emissions if emission intensities had been fixed at their 1990 level
+
+- Dotted blue (Scale + Composition + Technique)
+
+  - Observed level of emissions where the three margins of scale, composition, and technique changed
+
+---
+
+# Scale, Composition, and Technique Effects
+
+- The difference between Solid green and Dashed red:
+
+  - &lt;r&gt;Limited composition effect&lt;/r&gt; between low- and high-emission-intensive products
+
+- The difference Dashed red and Dotted blue:
+
+  - &lt;u&gt;Technique effect explains&lt;/u&gt; the decline in emission intensity at the level of individual products
+
+- &lt;u&gt;Explanation&lt;/u&gt;: increase in environmental regulation at the US from 1990s
+
+  - But what about the rest of the World?
+  
+---
+class: inverse, center, middle
+count: false
+
+# Part 3: Trade, Growth, and the
+
+# Environment
+  
+---
+
+# Trade, Growth, and the Environment
+
+Does this evidence of developed economies becoming "cleaner" imply
+
+- Lower environmental damages &lt;g&gt;worldwide?&lt;/g&gt;
+
+- Efficient explotation of &lt;r&gt;environmental resources?&lt;/r&gt;
+
+Answering these questions depend on &lt;u&gt;how interconnected countries interact&lt;/u&gt; with one another
+
+---
+
+# Trade, Growth, and the Environment
+
+How would &lt;g&gt;trade openness&lt;/g&gt; interact with environmental outcomes &lt;r&gt;worldwide&lt;/r&gt;?
+
+- &lt;u&gt;Scale effect&lt;/u&gt;: growth `\(\rightarrow\)` emissions relies on the EKC (ambiguous) idea
+
+- &lt;u&gt;Composition effect&lt;/u&gt;: specialization through comparative advantages
+
+  - Ambiguous effects: what drives comparative advantage?
+  
+- &lt;u&gt;Technique effect&lt;/u&gt;: competition with other (less stringent economies) `\(\rightarrow\)` ambiguous effects (what about lobby?)
+
+&lt;u&gt;Next&lt;/u&gt;: evidence for composition and technique effects
+
+---
+
+# Trade, Growth, and the Environment: Composition Effects
+
+On the shoulder of giants: Grossman and Krueger (1991)'s *"Environmental impacts of NAFTA"*
+
+.pull-left[
+Contemporaneous to other EKC studies
+
+&lt;g&gt;No evidence&lt;/g&gt; of composition effects of NAFTA
+
+That is, no evidence of reallocation of US firms to Mexican *"maquiladoras"* sector
+
+- *"Maquiladoras"*: US firms in Mexico (within 20-km) that benefit from special customs treatment
+  
+Instead, reallocation based only on &lt;y&gt;economic determinants&lt;/y&gt;
+
+]
+.pull-right[
+.center[&lt;img src="figs/fig_grossman_nafta.png" style="width: 90%" /&gt;]
+]
+
+---
+
+# Trade, Growth, and the Environment: Composition Effects
+
+More recent, worldwide evidence challenge those conclusions
+
+Broner et al. (2012)'s *"Sources of comparative advantage in polluting industries"*
+
+- Collect &lt;g&gt;worldwide data&lt;/g&gt; on environmental policy and pollution
+
+  - Do countries with laxer policies pollute more?
+  
+  - That is, does laxer environmental policies generate &lt;r&gt;pollution havens?&lt;/r&gt;
+  
+- Important: deal with reverse causality with an IV (what is the direction of bias?)
+
+  - Instrument based on meteorological conditions (that facilitate dispersion of pollutants)
+  
+- **Findings:** clear evidence of pollution havens
+  - Relative stringency of environmental policies `\(\rightarrow\)` specialization in polluting industries
+  - Trade openness would intensify this effect
+
+---
+
+# Trade, Growth, and the Environment: Composition Effects
+
+
+Copeland et al. (2021)'s "*Globalization and the Environment*" elaborate that further (3 facts)
+
+--
+
+&lt;u&gt;Fact 1&lt;/u&gt;: Most global emissions come from developing countries
+
+&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/fig_shapiro_sct3.png" style="width: 100%" /&gt;
+
+
+---
+
+# Trade, Growth, and the Environment: Composition Effects
+
+&lt;u&gt;Fact 2&lt;/u&gt;: International trade accounts for `\(\sim\)` 1/3 of global pollution
+
+&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/fig_shapiro_sct4.png" style="width: 100%" /&gt;
+
+---
+
+# Trade, Growth, and the Environment: Composition Effects
+
+&lt;u&gt;Fact 3&lt;/u&gt;: Rich countries are increasingly outsourcing pollution (to pollution havens)
+
+&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/fig_shapiro_sct5.png" style="width: 100%" /&gt;
+
+---
+
+# Trade, Growth, and the Environment: Composition Effects
+
+&lt;u&gt;Composition effects of globalization&lt;/u&gt;
+
+- Key driver of (outsourced) pollution increases and the existence of **pollution havens**
+
+Other interesting studies on *different environmental outcomes*:
+
+- Debaere (2014) and Carleton et al. (2024): role of trade and &lt;g&gt;water usage&lt;/g&gt; across the world
+
+- Farrokhi et al. (2023): relationship between trade openness and global &lt;r&gt;deforestation&lt;/r&gt;
+
+- Dhingra et al. (2024?): globalization and &lt;y&gt;plastic waste trade&lt;/y&gt;
+
+---
+
+# Trade, Growth, and the Environment: Technique Effects
+
+In the US example (Shapiro and Walker, 2018):
+
+- Environmental regulation was the driver of technique effects and `\(\downarrow\)` emissions
+
+How woud &lt;g&gt;trade openness&lt;/g&gt; interact with this effect?
+
+- Higher access to &lt;r&gt;cleaner inputs&lt;/r&gt; (e.g., solar panels) `\(\rightarrow\)` positive outcomes?
+
+- &lt;y&gt;Competition&lt;/y&gt; with foreign, less stringent firms `\(\rightarrow\)` pressure for laxer domestic policies
+
+Shapiro (2021)'s *"The Environmental Bias of Trade Policy"*: do trade policy reflect that?
+
+---
+
+# Trade, Growth, and the Environment: Technique Effects
+
+.pull-left[
+
+Shapiro finds lower tariffs for &lt;u&gt;upstream industries&lt;/u&gt;
+
+- Upstream = raw products (iron, coal, ...)
+
+- More carbon intense!
+
+Relative lower tariffs = &lt;g&gt;subsidy for carbon&lt;/g&gt;
+
+- Implicit worldwide subsidy of about USD 500B!
+
+]
+.pull-right[
+&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/fig_shapiro1.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Trade, Growth, and the Environment: Technique Effects
+
+.pull-left[
+
+What is the explanation for it?
+- &lt;g&gt;Lobby&lt;/g&gt; from upstream industries
+
+&lt;u&gt;Important&lt;/u&gt;: This subsidy incentivizes &lt;r&gt;importing dirty goods&lt;/r&gt;
+
+]
+.pull-right[
+&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/fig_shapiro3.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Trade, Growth, and the Environment: Technique Effects
+
+.pull-left[
+
+What is the explanation for it?
+- &lt;g&gt;Lobby&lt;/g&gt; from upstream industries
+
+&lt;u&gt;Important&lt;/u&gt;: This subsidy incentivizes &lt;r&gt;importing dirty goods&lt;/r&gt;
+
+- Note the higher subsidies in countries with stringent environmental policies (e.g. Norway)
+
+]
+.pull-right[
+&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/fig_shapiro2.png" style="width: 100%" /&gt;
+]
+
+---
+class: inverse, center, middle
+count: false
+
+# Part 3: Trade, Growth, and the
+
+# Environment: Takeaways
+
+---
+
+# Trade, Growth, and the Environment: Takeaways
+
+The evidence of developed economies &lt;g&gt;technically transitioning&lt;/g&gt; towards greener economies is limited
+
+- EKC concept seems outdated or simplified interpretation of how economic development relates to environmental quality
+
+- Improved quality in modern economies hides a process of pollution outsourcing
+
+  - To what are called &lt;r&gt;pollution havens&lt;/r&gt;
+
+- Structural change (or composition effects) are an important part of the story
+
+  - Without (global) innovation, limited scope for `\(\uparrow\)` global environmental quality
+  
+- Instead, developed economies might continue to import goods with high &lt;y&gt;environmental footprints&lt;/y&gt;
+
+
+---
+class: inverse, center, middle
+count: false
+
+# See you next class!
+
+---
+
+# References
+
+- Broner, Fernando; Bustos, Paula; Carvalho, Vasco M. Sources of comparative advantage in polluting industries. National Bureau of Economic Research, 2012.
+
+- Copeland, B.R. and Taylor, M.S., 2004. "Trade, growth, and the environment" *Journal of Economic Literature*, 42(1), pp.7-71.
+
+- Copeland, B.R., Shapiro, J.S. and Taylor, M.S., 2021. Globalization and the environment. *Handbook of International Economics*
+
+- Debaere, P., 2014. The global economics of water: is water a source of comparative advantage?. *American Economic Journal: Applied Economics*, 6(2), pp.32-48.
+
+- Farrokhi, F., Kang, E., Pellegrina, H.S., Dhabi, N.A. and Sotelo, S., 2023. Deforestation: A Global and Dynamic Perspective.
+
+---
+
+# References
+
+- Grossman, G.M. and Krueger, A.B., 1991. Environmental impacts of a North American free trade agreement.
+
+- Grossman, G.M. and Krueger, A.B., 1995. Economic growth and the environment. *The quarterly journal of economics*, 110(2), pp.353-377.
+
+- Shapiro, J.S. and Walker, R., 2018. Why is pollution from US manufacturing declining? The roles of environmental regulation, productivity, and trade. *American Economic Review*, 108(12), pp.3814-3854
+
+- Shapiro, J.S., 2021. The environmental bias of trade policy. The *Quarterly Journal of Economics*, 136(2), pp.831-886.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
