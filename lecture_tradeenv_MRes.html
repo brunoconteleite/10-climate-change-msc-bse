@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Trade and the Environment</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bruno Conte" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer-bse.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: center, middle
+
+&lt;style&gt;
+g { color: rgb(0,130,155) }
+r { color: rgb(174,77,41) }
+y { color: rgb(177,148,40) }
+&lt;/style&gt;
+
+# Week 04: International Trade and the Environment
+
+## &lt;img src="https://brunoconteleite.github.io/08-geospatial-ds-bse/figs/bse_primary_logo.png" style="width: 35%" /&gt;&lt;br&gt;&lt;br&gt;Bruno Conte
+
+## 24/Apr/2024
+
+---
+
+# International Trade and the Environment
+
+- We now look at the relationship of international trade and environmental outcomes
+
+- Why is that important?
+
+  - International trade `\(\rightarrow\)` many economic outcomes (and thus environmental outcomes)
+  
+  - Also, trade allows for the existence of &lt;r&gt;pollution havens&lt;/r&gt; (i.e., outsourcing pollution)
+  
+- This is a fast-growing field, with research focused in many outcomes
+
+  - CO2 emissions (Copeland and Taylor, 2004; Copeland et al., 2022, Shapiro, 2016; 2021, 2023)
+
+  - Deforestation (Hsiao, 2023; Farrokhi et al., 2024)
+  
+  - Water depletion (Debaere, 2014; Carleton et al., 2023)
+  
+  - ...
+
+---
+
+# International Trade and the Environment
+
+- &lt;u&gt;Our focus&lt;/u&gt;: international trade, economic activity, and &lt;g&gt;emissions&lt;/g&gt;
+
+- Does trade attenuate or magnify emissions?
+
+- How does it interact with &lt;r&gt;economic forces&lt;/r&gt; that `\(\rightarrow\)` CO2 emissions?
+
+- Which are these forces?
+
+    
+.center[&lt;u&gt;This class:&lt;/u&gt; &lt;r&gt;**answers to these questions from Shapiro and Walker (2018)**&lt;/r&gt;]
+
+
+---
+
+# Food for thought
+
+- Grossman, G.M. and Krueger, A.B., 1991. &lt;g&gt;Environmental impacts of a North American free trade agreement&lt;/g&gt;. NBER WP 3941.
+
+- Grossman, G.M. and Krueger, A.B., 1995. &lt;g&gt;Economic growth and the environment&lt;/g&gt;. *The Quarterly Journal of Economics*, 110(2), pp.353-377.
+
+- Copeland, B.R. and Taylor, M.S., 2004. &lt;g&gt;Trade, growth, and the environment&lt;/g&gt;. *Journal of Economic literature*, 42(1), pp.7-71.
+
+- Shapiro, J.S., 2016. &lt;g&gt;Trade costs, CO2, and the environment&lt;/g&gt;. *American Economic Journal: Economic Policy*, 8(4), pp.220-254.
+
+- Shapiro, J.S., 2021. &lt;g&gt;The environmental bias of trade policy&lt;/g&gt;. *The Quarterly Journal of Economics*, 136(2), pp.831-886.
+
+- Copeland, B.R., Shapiro, J.S. and Taylor, M.S., 2022. &lt;g&gt;Globalization and the environment&lt;/g&gt;. *In Handbook of International Economics* (Vol. 5, pp. 61-146). Elsevier.
+
+---
+class: inverse, center, middle
+count: false
+
+# Introduction: Sources of Changes in
+
+# Environmental Quality and the
+
+# Role of International Trade
+
+---
+
+# Intro: Sources of Changes in Environmental Quality
+
+The questions we are interested at are:
+
+1. How to establish a &lt;g&gt;systematic relationship&lt;/g&gt; between economic growth and environmental quality?
+
+  - Environmental Kuznets Curve (Grossman and Krueger, 1994)
+
+2. What are the sources of &lt;r&gt;environmental quality changes&lt;/r&gt;?
+
+  - Scale, Composition, and Techinique Effects (Copeland and Taylor, 2004)
+
+3. What explains differences in growth-environment paths across the world and/or within countries?
+
+  - Structural change, globalization, or &lt;y&gt;environmental policy?&lt;/y&gt;
+  
+---
+
+# Intro: Sources of Changes in Environmental Quality
+
+In the early 1990s, Grossman and Krueger (GK) hypothesized
+
+&gt; *"Economic growth brings an initial phase of environmental deterioration followed by a subsequent phase of improvement."*
+
+- Two-phase process: &lt;g&gt;inverted U-shaped relationship&lt;/g&gt; between income per capita and environmental quality in a country
+
+- Referred to in the literature as the "*Environmental Kuznets Curve*" (EKC)
+
+- &lt;u&gt;Inspiration&lt;/u&gt;: original Kuznets curve (relationship between income and &lt;r&gt;inequality&lt;/r&gt;)
+
+---
+
+# Intro: Sources of Changes in Environmental Quality
+
+How does that look in 1990s? Grossman and Krueger's results:
+
+.pull-left[
+&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/grossman_ekc1.png" style="width: 95%" /&gt;
+]
+.pull-right[
+&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/grossman_ekc2.png" style="width: 95%" /&gt;
+]
+
+---
+
+.center[
+&lt;iframe src="https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart" loading="lazy" style="width: 80%; height: 600px; border: 0px none;"&gt;&lt;/iframe&gt;
+]
+
+---
+
+# Intro: Sources of Changes in Environmental Quality
+
+What can possibly &lt;g&gt;explain these changes&lt;/g&gt; in environmental damages? Three main channels:
+
+&lt;u&gt;**Scale effect**&lt;/u&gt;: changes in emission if the economy simple &lt;g&gt;"scales up"&lt;/g&gt;
+
+- More output, more emissions
+
+- Trade `\(\rightarrow\)` growth `\(\rightarrow\)` emissions?
+
+- Disregards changes in &lt;r&gt;sectoral composition&lt;/r&gt; and/or technology
+
+- "De-growth" `\(\rightarrow\)` improved environmental quality
+
+---
+
+# Intro: Sources of Changes in Environmental Quality
+
+&lt;u&gt;**Composition effect**&lt;/u&gt;: changes in emission if the economy &lt;g&gt;switches sectors&lt;/g&gt;
+
+- Less manufacturing, more services; less polluting products *within industries* (e.g., paper glasses rather than plastic glasses)
+
+- Important role of international trade (e.g., outsourcing polluting goods)
+
+- Assumes no changes in aggregate scale and/or &lt;r&gt;technologies&lt;/r&gt;
+
+  - What about innovation making manufacturing less polluting?
+
+&lt;u&gt;**Technique effect**&lt;/u&gt;: changes in emission if the sectors become &lt;y&gt;less emission-intense&lt;/y&gt;
+
+- Allow for composition and scale to remain constant
+
+- Driven purely by technological innovation!
+
+- Important: can be constrained by &lt;u&gt;environmental regulation&lt;/u&gt;!
+
+---
+
+# Intro: Sources of Changes in Environmental Quality
+
+In reality, all effects could be in place &lt;g&gt;at the same time&lt;/g&gt;!
+
+- How to disentagle the changes in emission per capita across countries over time?
+
+  - Were they techinically changing, or only changing composition (i.e., outsourcing pollution)?
+  
+- Alternatively, &lt;r&gt;can these channels explain&lt;/r&gt; changes in environmental quality within industries over time?
+
+  - And assess the &lt;y&gt;role of trade or environmental regulation&lt;/y&gt; therein?
+  
+Shapiro and Walker (2018) answer these questions for the case of manufacturing in the US
+
+---
+class: inverse, center, middle
+count: false
+
+# Environmental Quality, the
+
+# Role of International Trade,
+
+# and Environmental Regulation
+
+---
+
+# Manufacturing Environmental Quality Over Time
+
+.pull-left[
+&lt;u&gt;The US case&lt;/u&gt;: manufacturing output has been increasing remarkably, but &lt;g&gt;emissions decreasing&lt;/g&gt;
+
+- Which of the three channels explain that?
+
+- Can we infer the role of trade and/or environmental policy behind this process?
+
+]
+
+.pull-right[&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/fig_shapiro_sct1.png" style="width: 100%" /&gt;]
+
+---
+
+# Manufacturing Environmental Quality Over Time
+
+To answer that, Shapiro and Walker (2018)
+
+1. Design a &lt;g&gt;statistical decomposition&lt;/g&gt;: scale, composition, and technique effects
+
+  - Evidence for the latter
+
+2. Develop an &lt;r&gt;economic model&lt;/r&gt; that microfounds the underlying mechanisms
+
+  - Role of firm entry/exit and productivity, environmental regulation, and international trade
+  
+3. Link model + data = &lt;y&gt;counterfactuals&lt;/y&gt;
+
+  - What explains the importance of technique effect? Productivity growth? Change in consumer preferences? Foreign competition?
+  
+  - Answer: Environmental regulation
+
+---
+
+# Step 1: Decomposing Scale, Composition, and Technique Effects
+
+Focus of Shapiro and Walker (2018): changes &lt;g&gt;within manufacturing industries&lt;/g&gt;
+
+- i.e., &lt;y&gt;different products&lt;/y&gt; (e.g., paper versus plastic glass)
+
+Define &lt;r&gt;total manufacturing pollution&lt;/r&gt; `\(Z\)` in *units of pollutants*
+`$$Z = \sum_s z_s = \sum_s x_s e_s = X \sum_s \kappa_s e_s, \quad (1)$$`
+where `\(z_s = x_s e_s \equiv\)` product `\(s\)` total pollution
+
+- `\(x_s \equiv\)` product `\(s\)` output (USD); `\(e_s \equiv z_s / x_s\)` product `\(s\)` emission intensity (pollutant/USD)
+
+- Alternatively, `\(X \equiv\)` total manufac. output; `\(\kappa_s \equiv x_s / X\)` `\(s\)` share of total output
+
+Important: focus on **product** `\(s \in\)` industry `\(\in\)` manufacturing sector
+
+---
+
+# Step 1: Decomposing Scale, Composition, and Technique Effects
+
+In vector notation, `\((1)\)` writes as `\(Z = X \kappa'\mathbf{e}\)`; differentiate it
+`$$dZ/Z = \underbrace{dX/X}_{\text{scale effect}} + \underbrace{d\kappa/\kappa}_{\text{composition effect}} + \underbrace{de/e}_{\text{technique effect}}$$`
+Shapiro and Walker (2018) decompose the changes in US manufac. emissions over time with yearly data on
+
+- Total pollution and output (National Emissions' Inventory + Census)
+
+- Annual Product-level output shares (Census + Annual Survey on Manufacturing)
+
+- Product-level emission intensities (NEI + Annual Survey on Manufacturing)
+
+---
+
+&lt;!-- # Step 1: Decomposing Scale, Composition, and Technique Effects --&gt;
+
+.center[&lt;img src="https://brunoconteleite.github.io/09-climate-change-bsc-upf/figs/fig_shapiro_sct2.png" style="width: 85%" /&gt;]
+
+---
+
+# Step 1: Decomposing Scale, Composition, and Technique Effects
+
+These (reduced form) results are &lt;u&gt;silent about the underlying channels&lt;/u&gt;. They could be
+
+1. Increasing &lt;r&gt;productivity&lt;/r&gt; (more output/units of pollutants)
+
+2. &lt;y&gt;Trade liberalization&lt;/y&gt; (NAFTA, China) `\(\rightarrow\)` exit of unproductive (e.g., polluting) firms
+
+3. Stricter &lt;g&gt;environmental rules&lt;/g&gt; (e.g., filters, treating polluted water)
+
+&lt;u&gt;Next&lt;/u&gt;: economic model that microfound these channels (step 2)
+
+---
+class: inverse, center, middle
+count: false
+
+# Trade, Environmental Quality, and
+
+# Environmental Regulation in
+
+# General Equilibrium
+
+---
+
+# Step 2: A General Equilibrium Model of Trade, Environmental Regulation, and Pollution
+
+Main intuition:
+
+- Model of firm entry, production, trade, and &lt;g&gt;pollution abatement&lt;/g&gt; across countries `\(o\)` or `\(d\)`
+
+- Firms differ in productivity `\(\rightarrow\)` `\(\neq\)` pollution abatement investments (hence, pollution)
+
+- Firms pay &lt;r&gt;tariffs to export&lt;/r&gt; goods and &lt;y&gt;regulation taxes&lt;/y&gt; if polluting
+
+Main mechanisms:
+
+- Trade openess (can) select more productive firms (or select into specific products)
+
+- Productivity growth `\(\uparrow\)` abatement investments
+
+---
+
+# Step 2: A General Equilibrium Model of Trade, Environmental Regulation, and Pollution
+
+&lt;u&gt;Preferences&lt;/u&gt;: representative agent in each country `\(d\)` (destination) with CES
+`$$U_d = \prod_s \left( \left[ \sum_o \int q_{od,s}(\omega)^{\frac{\sigma_s - 1}{\sigma_s}} d\omega \right]^{\frac{\sigma_s}{\sigma_s - 1}} \right)^{\beta_s}$$`
+- Agents consume a constant `\(\beta_s\)` fraction of income in each `\(s\)` sector
+
+- Agents consume varieties `\(\omega\)` of sector- `\(s\)` goods produced in all countries `\(o\)` (origin)
+
+- `\(\sigma_s \equiv\)` elasticity of substitution across varieties (e.g., English versus American steel bar)
+
+---
+
+# Step 2: A General Equilibrium Model of Trade, Environmental Regulation, and Pollution
+
+&lt;u&gt;Technology&lt;/u&gt;: in each `\(o\)` country, continuum of firms that choose to (i) entry the market and (ii) prices to maximize profits
+`$$\pi_{o,s}(\varphi) = \sum_{d} \pi_{od,s}(\varphi) - w_o f_{o,s}^e,$$`
+where `\(\varphi\)` is the (heterogenous) level of firm TFP, and `\(f_{o,s}^e\)` a fixed entry cost. More importantly,
+`$$\pi_{od,s}(\varphi) \approx p_{od,s}(\varphi) \underbrace{q_{od,s}(\varphi)}_{= (1 - a(\varphi)) \varphi l_{o,s}(\varphi)} - \underbrace{w_o l_{od,s}(\varphi) \tau_{od,s}}_{\tau \text{ tariffs to ship to } d} - \underbrace{t_{o,s} z_{od,s}(\varphi)}_{t \text{ taxes on pollution } z},$$`
+where `\(a(\varphi) \equiv\)` is the (endogenous) &lt;r&gt;abatement choice&lt;/r&gt; of firms
+
+---
+
+# Step 2: A General Equilibrium Model of Trade, Environmental Regulation, and Pollution
+
+As a consequence, firm-level &lt;g&gt;pollution is an endogenous&lt;/g&gt; choice
+`$$z_{od,s}(\varphi) = \left(1 - a(\varphi) \right)^{1/\alpha_s} \varphi l_{od,s}(\varphi) \quad (2)$$`
+and the production function becomes
+`$$q_{od,s} = (z_{od,s})^{\alpha_s}(\varphi l_{od,s})^{1-\alpha_s}, \quad (3)$$`
+that is, Cobb-Douglas using &lt;r&gt;pollution and labor as inputs&lt;/r&gt;
+
+- And `\(\alpha_s\)` is the sectoral &lt;y&gt;elasticity of emissions&lt;/y&gt; to abatement/pollution taxes
+
+---
+
+# Step 2: A General Equilibrium Model of Trade, Environmental Regulation, and Pollution
+
+&lt;u&gt;Implication&lt;/u&gt;: pollution intensity `\((z_{od,s}/q_{od,s})\)` &lt;g&gt;decreases with&lt;/g&gt;
+
+- Productivity `\((\varphi)\)` (at firm level)
+
+- Pollution taxes `\(t_{o,s}\)` (at sector level)
+
+- Trade liberalization `\((\tau_{od,s})\)` (at sector level)
+
+Which of them &lt;r&gt;explain the technique effect-driven&lt;/r&gt; reduction in emissions in US?
+
+- Link the model to data to estimate parameter (structural estimation)
+
+- Use the calibrated model for conterfactuals
+
+  - What if regulation `\(t_{od,s}\)` had remained unchanged in the US?
+  
+---
+class: inverse, center, middle
+count: false
+
+# Structural Estimation and
+
+# GE Counterfactuals
+
+---
+
+# Step 3: Structural Estimation and Counterfactuals
+
+- Counterfactuals: simulation of the model in hypothetical (policy) scenarios
+
+- Require the model to be quantified/calibrated
+
+  - That is, give numbers to the parameters that drive the economic forces in the model
+  
+- Among other, these are `\(\{ \sigma_s, \theta_s, \alpha_s, \beta_s \}_s\)`
+
+  - Here, we focus on `\(\{ \alpha_s \}_s\)`: the elasticity of emissions
+
+---
+
+# Step 3: Structural Estimation and Counterfactuals
+
+To (structurally) estimate `\(\alpha_s\)`, combine (2) and (3) to obtain
+`$$\frac{z}{q} \propto \left( 1 - a \right)^{(1-\alpha)/\alpha}$$`
+taking logs and differences over time, one finds
+`$$\Delta \log \left( \frac{z_{i,t}}{q_{i,t}} \right) = \frac{1-\alpha}{\alpha} \Delta \log \left( 1 - a_{i,t}\right) + \eta_{i,t} + \epsilon_{i,t}$$`
+
+- OLS: data on `\((z_{i,t}/q_{i,t})\)` + `\((a_{i,t})\)` = `\(\hat{\alpha}\)`
+
+- What about &lt;r&gt;endogeneity&lt;/r&gt; (reverse causality, measurement error)?
+
+- &lt;y&gt;Instrument&lt;/y&gt;: "non-attainment" county-level policy
+
+  - Counties exceeding emission threshold have to adopt abatement in all sectors)
+
+---
+
+.center[&lt;img src="figs/fig_shapiro_results_IV.png" style="width: 85%" /&gt;]
+
+---
+
+# Step 3: Structural Estimation and Counterfactuals
+
+Interpreting the results:
+
+- `\((1-\alpha)/\alpha = 91 \rightarrow \hat{\alpha} \approx 0.011\)`
+
+- Firms on average pay &lt;g&gt;1% of their cost structure&lt;/g&gt; on "emissions" (i.e, abatement and/or pollution taxes)
+
+- Estimates differ across `\(s\)` industries!
+
+Other estimates are analogously estimated
+
+- Methodology follows Hsieh and Ossa (2016) and Antràs et al. (2017)
+
+With all parameters, how to &lt;r&gt;conduct counterfactuals&lt;/r&gt;?
+
+---
+
+# Step 3: Structural Estimation and Counterfactuals
+
+Challenge: solving the model &lt;g&gt;requires all its elements&lt;/g&gt;
+
+- Measuring productivities, trade barriers, pollution taxes, consumer preferences, ...
+
+Instead of measuring them, calculate their changes from time varying data
+
+- &lt;r&gt;Exact hat algebra&lt;/r&gt; (Dekle, Eaton, and Kortum, 2008): model elements in changes
+
+&lt;u&gt;Example&lt;/u&gt;: changes in &lt;y&gt;environmental regulation&lt;/y&gt; (i.e., pollution taxes)
+`$$\hat{t}_{o,s} = \frac{\hat{M}_{o,s}^e \hat{w}_o}{\hat{Z}_{o,s}},$$`
+where `\(\hat{M}_{o,s}^e \equiv\)` (change in) mass of firms, `\(\hat{w}_{o} \equiv\)` wages in `\(o\)`, and `\(\hat{Z}_{o,s} \equiv\)` sector `\(s\)` pollution
+
+- If measuring `\(\{ \hat{M}_{o,s}^e, \hat{w}_o, \hat{Z}_{o,s} \}\)`, one retrives `\(\hat{t}_{o,s}\)` over time!
+
+---
+
+.center[&lt;img src="figs/fig_shapiro_results_hat_t.png" style="width: 75%" /&gt;]
+
+---
+
+# Step 3: Structural Estimation and Counterfactuals
+
+One can perform the same exercise for &lt;g&gt;all other possible "shocks"&lt;/g&gt; from the model
+
+- Change in preferences `\((\beta_s)\)`
+
+- Change in foreign competition (e.g., international trade with China; `\(\tau_{od,s})\)`
+
+- Change in firm productivity
+
+Then, &lt;r&gt;simulate the model&lt;/r&gt; with them
+
+- If using all shocks, the &lt;y&gt;model replicates the data&lt;/y&gt; (i.e., evolution of emissions)
+
+- Removing specific shocks &lt;u&gt;illustrates their marginal role&lt;/u&gt;
+
+---
+
+.center[&lt;img src="figs/fig_shapiro_results_cfac1.png" style="width: 50%" /&gt;&lt;img src="figs/fig_shapiro_results_cfac2.png" style="width: 50%" /&gt;]
+.center[&lt;img src="figs/fig_shapiro_results_cfac3.png" style="width: 70%" /&gt;]
+
+---
+
+# Step 3: Structural Estimation and Counterfactuals
+
+**Shapiro and Walker (2018)**: main takeaways
+
+- Techinique effect explains most of the change in US manufacturing decline in pollution
+
+- Stringency in US environmental regulation is the main driver &lt;g&gt;within the technique effect&lt;/g&gt;
+
+Technically, it is a project that combines
+
+- &lt;y&gt;Rich data and convincing empirical facts&lt;/y&gt;
+
+- Plausible and tractable theory that explains these results
+
+- Clean estimation strategy to quantify the model for counterfactuals
+
+- &lt;r&gt;Meaningful counterfactual exercises&lt;/r&gt;: answer a relevant question!
+
+---
+class: inverse, center, middle
+count: false
+
+# See you next class!
+
+
+---
+
+# References
+
+- Carleton, T., Crews, L. and Nath, I., 2023. Agriculture, trade, and the spatial efficiency of global water use. *Working Paper*.
+
+- Copeland, B.R. and Taylor, M.S., 2004. Trade, growth, and the environment. *Journal of Economic Literature*, 42(1), pp.7-71.
+
+- Copeland, B.R., Shapiro, J.S. and Taylor, M.S., 2022. Globalization and the environment. In *Handbook of International Economics* (Vol. 5, pp. 61-146). Elsevier.
+
+- Debaere, P., 2014. The global economics of water: is water a source of comparative advantage?. *American Economic Journal: Applied Economics*, 6(2), pp.32-48.
+
+- Dekle, R., Eaton, J. and Kortum, S., 2008. Global rebalancing with gravity: Measuring the burden of adjustment. *IMF staff papers*, 55(3), pp.511-540.
+
+- Grossman, G.M. and Krueger, A.B., 1991. Environmental impacts of a North American free trade agreement. NBER WP 3941.
+
+---
+
+# References
+
+- Grossman, G.M. and Krueger, A.B., 1995. Economic growth and the environment. *The Quarterly Journal of Economics*, 110(2), pp.353-377.
+
+- Farrokhi, F., Kang, E., Pellegrina, H.S. and Sotelo, S., 2023. *Deforestation: A global and dynamic perspective*. Working Paper.
+
+- Hsiao, A., 2023. Coordination and commitment in international climate action: evidence from palm oil. *Working Paper*.
+
+- Shapiro, J.S., 2016. Trade costs, CO2, and the environment. *American Economic Journal: Economic Policy*, 8(4), pp.220-254.
+
+- Shapiro, J.S., 2021. The environmental bias of trade policy. *The Quarterly Journal of Economics*, 136(2), pp.831-886.
+
+---
+
+# References
+
+- Shapiro, J.S., 2023. Institutions, Comparative Advantage, and the Environment (No. w31768). *National Bureau of Economic Research*.
+
+- Shapiro, J.S. and Walker, R., 2018. Why is pollution from US manufacturing declining? The roles of environmental regulation, productivity, and trade. *American Economic Review*, 108(12), pp.3814-3854.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
