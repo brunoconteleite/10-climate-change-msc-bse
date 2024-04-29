@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Spatial IAM 1</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bruno Conte" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer-bse.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: center, middle
+
+&lt;style&gt;
+g { color: rgb(0,130,155) }
+r { color: rgb(174,77,41) }
+y { color: rgb(177,148,40) }
+&lt;/style&gt;
+
+# Week 05: Spatial Integrated Assessment Models
+
+## &lt;img src="https://brunoconteleite.github.io/08-geospatial-ds-bse/figs/bse_primary_logo.png" style="width: 35%" /&gt;&lt;br&gt;&lt;br&gt;Bruno Conte
+
+## 29/Apr/2024
+
+---
+
+# Climate Change Economics and Integrated Assessment Models
+
+- We now conclude by learning frontier methods climate change economists
+
+  - How are economist investigating patterns of climate change across time and space?
+  
+  - How to account for (spatially) heterogeneous impacts of climate change?
+  
+  - How to design climate policy in the current interconnected world?
+  
+- Desmet and Rossi-Hansberg (2024): "Climate Change Economics over Time and Space"
+
+  - Integrated Assessment Models +
+  
+  - Quantitative Spatial Models =
+  
+  - Spatial Integrated Assessment Models (S-IAM)
+  
+---
+
+# Climate Change Economics and Integrated Assessment Models
+
+1. Introduction: Linking IAM to Spatial Models
+
+  - Why is it needed?
+  
+  - How is it done?
+  
+2. On the mechanics of S-IAM
+
+  - Spatial Economy
+  
+  - Climate Integration
+  
+3. Current state of research
+
+  - Main takeaways from most recent studies
+
+---
+class: inverse, center, middle
+count: false
+
+# Introduction: Adding Space to IAMs
+
+---
+
+# Intro: Linking IAM to Spatial Models
+
+- Integrated Assessment Models: economy-climate co-evolve dynamically
+
+.center[&lt;img src="figs/siam_0.png" style="width: 50%" /&gt;]
+
+--
+
+- **Spatial** Integrated Assessment Models: economy is spatial
+
+---
+
+# Intro: Linking IAM to Spatial Models
+
+- Why do we need them?
+
+---
+
+# Intro: Linking IAM to Spatial Models: Economy
+
+.center[&lt;img src="figs/siam_1.png" style="width: 85%" /&gt;]
+
+---
+
+# Intro: Linking IAM to Spatial Models: Dynamic/Spatial Economy
+
+.center[&lt;img src="figs/siam_2.png" style="width: 85%" /&gt;]
+
+---
+
+# Intro: Linking IAM to Spatial Models: Integrating Climate
+
+.center[&lt;img src="figs/siam_3.png" style="width: 85%" /&gt;]
+
+---
+
+# Intro: Linking IAM to Spatial Models: Integrating Climate
+
+.center[&lt;img src="figs/siam_4.png" style="width: 85%" /&gt;]
+
+---
+class: inverse, center, middle
+count: false
+
+# S-IAM's Main Ingredients
+
+# Economic Component
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+&lt;u&gt;**Endowment**&lt;/u&gt;: economy composed of `\(r\)` locations endowed with
+
+- Time varying population `\(L_t(r)\)` and land `\(H_t(r)\)`
+
+- &lt;g&gt;Time varying endowments&lt;/g&gt; `\(\leftrightarrow\)` climate change impacts (e.g., natality rates, coastal flooding)
+
+&lt;u&gt;**Preferences**&lt;/u&gt;: at each time `\(t\)`, &lt;r&gt;heterogeneous agents&lt;/r&gt; `\(j\)` choose location `\(r\)` that solves
+`$$\max_j \quad U_{t}^j(r) = \underbrace{a_j(r)}_{\text{amenities}} \times \underbrace{C_{t}(r)}_{\text{consumption of goods}} \times \underbrace{m_t^j(r)^{-1}}_{\text{mobility cost}} \times \underbrace{\varepsilon_t^j(r)}_{\text{idiosyncratic taste}}$$`
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- &lt;u&gt;Amenities&lt;/u&gt; `\(a_t(r)\)`: capture &lt;g&gt;non-economic aspects&lt;/g&gt; that affect welfare in `\(r\)`
+
+  - Proximity to coast, average temperature `\(T_t(r)\)`, ...
+  
+  - Can be endogenous, depending on density &lt;r&gt;or the climate itself&lt;/r&gt; (Cruz and Rossi-Hansberg, 2024)
+
+`$$a_t(r) = \bar{a} \times \underbrace{\left[L_t(r) / H_t(r)\right]^{-\alpha}}_{\text{congestion}}, \text{ or } \quad a_t(r) = \bar{a} \times \underbrace{g_t(r,T_t(r))}_{\text{direct climate damage}}$$`
+
+  - "Amenity concept" comes from urban economics (trees, schooling, crime, ...)
+  
+  - `\(a_t(r)\)` captures fundamental aspects that make people choosing `\(r\)` regardless of economic conditions
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- &lt;u&gt;Consumption&lt;/u&gt; `\(C_t(r)\)`: captures utility from consuming a composite of goods
+
+  - It does not depend on worker `\(j\)` type `\(\rightarrow\)` &lt;g&gt;homogeneous workers&lt;/g&gt; w.r.t consumption
+  
+  - No saving/asset accumulation `\(\rightarrow C_j(r) = v(r)/P(r) \equiv\)` real income at `\(j\)`
+  
+- If preferences are homothetic:
+`$$C_t(r) = \prod_{i=1}^{I} \left[ \int c_{it}^\omega(r)^{\rho}\right]^{\chi_i/\rho},$$`
+where `\(i = \{1, ..., I \}\)` are the sectors in the economy.
+
+  - `\(\rho = (\sigma-1)/\sigma \equiv\)` CES, `\(\omega \equiv\)` sector `\(i\)` good variety
+  
+  - `\(\chi_i \in [0,1] \rightarrow\)` &lt;r&gt;homothetic preferences&lt;/r&gt; (why)?
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- &lt;u&gt;Consumption&lt;/u&gt; `\(C_t(r)\)` can also be non-homothetic (Comin et al., 2021)
+`$$\sum_{i=1}^I \Omega_i^{1/\sigma} \times C_t(r)^{\epsilon_i/\sigma} \times C_{it}^{\frac{\sigma-1}{\sigma}} = 1,$$`
+where `\(C_t(r)\)` is implicitly defined and `\(\epsilon_i \equiv\)` non-homothetic CES. If so:
+`$$\text{sector } i \text{'s expenditure share} \equiv \chi_{it}(r) \equiv \frac{P_{it}(r) C_{it}(r)}{v_t(r)} = \\ = \Omega_i \times \underbrace{\left(\frac{P_{it}(r)}{P_{t}(r)}\right)^{1-\sigma}}_{\text{substitution effect}} \times \underbrace{\frac{v_t(r)}{P_t(r)}^{\epsilon_i - (1-\sigma)}}_{\text{income effect}},$$`
+where `\(\epsilon_i - (1 - \sigma)\)` defines sector `\(i\)`'s "type" (normal, necessity, etc)
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- &lt;u&gt;Mobility barriers&lt;/u&gt; `\(m_t^j(r)\)`: capture &lt;g&gt;spatial frictions&lt;/g&gt; that prevent individuals to move into `\(r\)`
+
+  - Cultural barriers, language, sunk relocation costs, country-level policies
+  
+  - It can be bilateral: `\(m_t^j(r,s) \propto \text{distance}(r,s)\)`
+  
+  - It can also depend on destination country `\(c(s)\)`'s &lt;r&gt;migration policy&lt;/r&gt;
+
+`$$m_t^j(r,s) \propto \text{distance}(r,s) \times c_t(s) \text{ if } r,s \in \text{ different countries}$$`
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- &lt;u&gt;Idiosyncratic taste shock&lt;/u&gt; `\(\varepsilon_t^j(r)\)`: captures "random preferences" of agents
+
+  - Rationalize location choices in reality regardless of economic characteristics, amenities, and mobility barriers
+  
+  - Distributional EV assumption; e.g., `\(\varepsilon_t^j(r) \sim e^{-i^\theta \times a_j(r)} \rightarrow\)` tractability:
+
+`$$L_t(r) \propto \frac{a_t(r) \times (v_t(r) / P_t(r))^{\theta} \times m_t(r)^{-\theta}}{\sum_s a_t(s) (v_t(s) / P_t(s))^{\theta} \times m_t(s)^{-\theta}},$$`
+i.e., close-form solution from discrete choice (EV) theory
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- &lt;u&gt;Technology&lt;/u&gt;: production in the economy uses `\(k\)` factors `\(F_{kit}(r)\)` following:
+`$$q_{it}(r) = \underbrace{z_{it}(r)}_{\text{productivity shifter}} \times \prod_{k} F_{kit}(r)^{\mu_{ki}},$$`
+where `\(\mu_{ki} \in [0,1] \rightarrow\)` &lt;g&gt;Cobb-Douglas&lt;/g&gt; production function. Importantly,
+`$$z_{it}(r) := z_{it}(r,T_t(r)) = (1 - \underbrace{g_{it}(r, T_t(r))}_{\text{damage function}}) \times \tau_{it}(r), \text{ where}$$`
+  
+  - `\(g_{it}(r, T_t(r))\)` depends on climate (change)
+  
+  - `\(\tau_{it}(r)\)` is the fundamental `\(i\)`'s productivity in `\(r\)` that &lt;r&gt;depends on innovation&lt;/r&gt;
+  
+---
+class: inverse, center, middle
+count: false
+
+# S-IAM's Main Ingredients
+
+# Climate Component
+
+---
+
+# S-IAM: Dynamic Climate-Economy Link
+
+- What &lt;g&gt;links the economy and the **global climate**&lt;/g&gt;?
+
+- Energy usage `\(E_t\)` `\(\rightarrow\)` CO2 emissions and stock `\(K_t\)` `\(\rightarrow\)` temperatures `\(T_t\)`:
+`\begin{align}
+K_t &amp;= \varepsilon_1 K_{t-1} + \varepsilon_2 E_t \\
+T_t &amp;= T_{t-1} + \nu \left(K_t - K_{t-1}\right), \text{ where} \\
+E_t &amp;= \int_r \sum_{i}^I E_{it(r)} dr
+\end{align}`
+
+- Then, mapping global global temperatures `\(T_t\)` into &lt;r&gt;local temperatures&lt;/r&gt; `\(T_t(r)\)` with
+`$$T_t(r) - T_{t-1}(r) = \xi(r) \left( T_t - T_{t-1}\right),$$`
+where `\(\xi(r) \equiv\)` downscaling parameter
+
+---
+
+# S-IAM: Dynamic Climate-Economy Link
+
+- Important elements &lt;r&gt;to be quantified&lt;/r&gt;:
+
+  - Carbon cycle parameters `\(\{\varepsilon_1, \varepsilon_2 \}\)` (climate sciences)
+  
+  - Scaling parameter `\(\nu\)`: quantified such that CO2 stocks match observed data
+  
+  - `\(\xi(r)\)`: use IPCC forecasts of global and local temperatures for 21st century
+  
+- Another important element is the &lt;g&gt;damage function&lt;/g&gt; `\(g_{it}(r, T_t(r))\)`:
+
+  - Conte et al. (2021): two sectors, bell-shaped
+
+  - Cruz and Rossi-Hansberg (2024): one-sector, semi-parametricly
+
+---
+
+# S-IAM: Dynamic Climate-Economy Link
+
+.center[&lt;img src="figs/lssww_1.png" style="width: 85%" /&gt;
+
+(note: `\(\xi(r)\)` from Conte et al., 2021)]
+
+---
+
+# S-IAM: Dynamic Climate-Economy Link
+
+.pull-left[&lt;img src="figs/lssww_2.png" style="width: 85%" /&gt;
+
+(note: `\(g_{i}(r,T_t(r))\)` from Conte et al., 2021)]
+.pull-right[&lt;img src="figs/cruz_hs_1.png" style="width: 100%" /&gt;
+
+(note: `\(\Delta g(r,T_t(r))\)` from Cruz and Rossi-Hansberg (2024))]
+
+---
+
+# S-IAM: Dynamic S-IAM
+
+&lt;g&gt;Solving S-IAMs&lt;/g&gt;: beyond the scope of this class (and course)
+
+- Idea: distributional assumptions on `\(\varepsilon_t^j(r)\)` and `\(z_{it}^\omega(r) \rightarrow\)` &lt;r&gt;closed-form solutions&lt;/r&gt;
+
+Ultimately, a spatial equilibrium is a &lt;u&gt;vector of factor prices&lt;/u&gt; `\((\text{e.g., } \{ w_t(r), r_t(r), e_t(r), ... \})\)`:
+
+- Markets clear `\(\equiv v_t(r) L_t(r) = \sum_{s} \sum_i \underbrace{X_{it}(r,s)}_{i\text{ good exports from } r \text{ to } s}\)`
+
+- Labor markets clear `\(\rightarrow L_t(r) \equiv f(\{ v_t(r), a_t(r),m_{t}(r) \}_r)\)`
+
+These implicitly define a system of `\(K \times N\)` equations and unknowns
+
+- Solved for with methods from Allen and Arkolakis (2014)
+
+---
+class: inverse, center, middle
+count: false
+
+# Main takeaways from recent
+
+# research with S-IAMs
+
+---
+
+# S-IAM: Recent Applications and Takeaways
+
+Next class, we cover in detail Cruz and Rossi-Hansberg (2024) and other important papers
+
+- Nevertheless, some summary of the main state of the art in terms of main takeaways
+
+Interaction between &lt;g&gt;trade and migration&lt;/g&gt;:
+
+- Multi-sector settings `\(\rightarrow\)` adapting by migrating or switching sectors
+
+- Conte et al. (2021): affected locations switch production to (unaffected) sectors `\(\rightarrow\)` lower welfare losses &lt;r&gt;and outmigration&lt;/r&gt;
+  
+---
+
+# S-IAM: Recent Applications and Takeaways
+
+Trade and the &lt;r&gt;food-problem&lt;/r&gt;:
+
+- Adaptation through sectoral specialization depends on importing of subsistence goods (agriculture)
+
+- Nath (2023) shows that high trade barriers limits scope of adaptation in rural, low income economies
+
+&lt;g&gt;Migration&lt;/g&gt; and the slow-moving nature of climate change
+
+- Desmet et al. (2021) shows that (gradual) migration from coastal regions is a key adaptation mechanisms
+
+---
+
+# S-IAM: Recent Applications and Takeaways
+
+Innovation has also a &lt;y&gt;central role&lt;/y&gt;:
+
+- Diffusion of productivity from affected to (newly settled) areas is key!
+
+&lt;g&gt;Anticipation and expectations&lt;/g&gt;:
+
+- Ignoring these elements `\(\rightarrow\)` magnified welfare losses
+
+**Next class**: more of it in detail!
+
+---
+class: inverse, center, middle
+count: false
+
+# See you next class!
+
+
+---
+
+# References
+
+- Carleton, T., Crews, L. and Nath, I., 2023. Agriculture, trade, and the spatial efficiency of global water use. *Working Paper*.
+
+- Copeland, B.R. and Taylor, M.S., 2004. Trade, growth, and the environment. *Journal of Economic Literature*, 42(1), pp.7-71.
+
+- Copeland, B.R., Shapiro, J.S. and Taylor, M.S., 2022. Globalization and the environment. In *Handbook of International Economics* (Vol. 5, pp. 61-146). Elsevier.
+
+- Debaere, P., 2014. The global economics of water: is water a source of comparative advantage?. *American Economic Journal: Applied Economics*, 6(2), pp.32-48.
+
+- Dekle, R., Eaton, J. and Kortum, S., 2008. Global rebalancing with gravity: Measuring the burden of adjustment. *IMF staff papers*, 55(3), pp.511-540.
+
+- Grossman, G.M. and Krueger, A.B., 1991. Environmental impacts of a North American free trade agreement. NBER WP 3941.
+
+---
+
+# References
+
+- Grossman, G.M. and Krueger, A.B., 1995. Economic growth and the environment. *The Quarterly Journal of Economics*, 110(2), pp.353-377.
+
+- Farrokhi, F., Kang, E., Pellegrina, H.S. and Sotelo, S., 2023. *Deforestation: A global and dynamic perspective*. Working Paper.
+
+- Hsiao, A., 2023. Coordination and commitment in international climate action: evidence from palm oil. *Working Paper*.
+
+- Shapiro, J.S., 2016. Trade costs, CO2, and the environment. *American Economic Journal: Economic Policy*, 8(4), pp.220-254.
+
+- Shapiro, J.S., 2021. The environmental bias of trade policy. *The Quarterly Journal of Economics*, 136(2), pp.831-886.
+
+---
+
+# References
+
+- Shapiro, J.S., 2023. Institutions, Comparative Advantage, and the Environment (No. w31768). *National Bureau of Economic Research*.
+
+- Shapiro, J.S. and Walker, R., 2018. Why is pollution from US manufacturing declining? The roles of environmental regulation, productivity, and trade. *American Economic Review*, 108(12), pp.3814-3854.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
