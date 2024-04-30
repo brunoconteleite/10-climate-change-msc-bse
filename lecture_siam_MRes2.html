@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Spatial IAM 2</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bruno Conte" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer-bse.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: center, middle
+
+&lt;style&gt;
+g { color: rgb(0,130,155) }
+r { color: rgb(174,77,41) }
+y { color: rgb(177,148,40) }
+&lt;/style&gt;
+
+# Week 05: Spatial Integrated Assessment Models 2
+
+## &lt;img src="https://brunoconteleite.github.io/08-geospatial-ds-bse/figs/bse_primary_logo.png" style="width: 35%" /&gt;&lt;br&gt;&lt;br&gt;Bruno Conte
+
+## 30/Apr/2024
+
+---
+
+# Climate Change Economics and Integrated Assessment Models
+
+- Last class, we covered the technicalities of &lt;g&gt;Spatial Integrated Assessment Models&lt;/g&gt; (S-IAM)
+  
+- Desmet and Rossi-Hansberg (2024): "Climate Change Economics over Time and Space"
+
+  - Integrated Assessment Models +
+  
+  - Quantitative Spatial Models =
+  
+  - Spatial Integrated Assessment Models (S-IAM)
+  
+- &lt;u&gt;**Today**&lt;/u&gt;: Cruz and Rossi-Hansberg (2024) "The Economic Geography of Global Warming"
+
+  - A &lt;r&gt;global application&lt;/r&gt; of S-IAM
+  
+  - Study margins of adjustment (trade, migration, and innovation)
+  
+  - Investigate &lt;y&gt;efficacy of policies&lt;/y&gt; (subsidies to clean energy, CO2 taxes, ...)
+  
+---
+
+# Climate Change Economics and Integrated Assessment Models
+
+1. Technicalities of Cruz and Rossi-Hansberg (2024)
+
+  - Main differences from yesterday's framework
+  
+  - Relevance of additional margins
+  
+2. Main results and takeaways
+
+  - Aggregate and spatial welfare losses from global warming
+  
+  - Role of mechanisms: migration, trade, and innovation
+  
+  - Policy experiments (CO2 tax)
+  
+3. Time allowing: differences with Conte et al. (2021)
+
+  - How they illustrate missing mechanisms in Cruz and Rossi-Hansberg (2024)
+
+---
+class: inverse, center, middle
+count: false
+
+# Introduction: S-IAM of Cruz and
+
+# Rossi-Hansberg (2024)
+
+---
+
+# Intro: Linking IAM to Spatial Models: Integrating Climate
+
+.center[&lt;img src="figs/siam_4.png" style="width: 85%" /&gt;]
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+&lt;u&gt;**Endowment**&lt;/u&gt;: economy composed of `\(r\)` locations endowed with
+
+- Time varying population `\(L_t(r)\)` and land `\(H_t(r)\)`
+
+- &lt;g&gt;Time varying endowments&lt;/g&gt; `\(\leftrightarrow\)` climate change impacts (e.g., natality rates, coastal flooding)
+
+&lt;u&gt;**Preferences**&lt;/u&gt;: at each time `\(t\)`, &lt;r&gt;heterogeneous agents&lt;/r&gt; `\(j\)` choose location `\(r\)` that solves
+`$$\max_j \quad U_{t}^j(r) = \underbrace{b_t(r)}_{\text{amenities}} \times \underbrace{C_{t}(r)}_{\text{consumption of goods}} \times \underbrace{m_t^j(r)^{-1}}_{\text{mobility cost}} \times \underbrace{\varepsilon_t^j(r)}_{\text{idiosyncratic taste}}$$`
+
+&lt;y&gt;Main differences&lt;/y&gt;:  amenities and consumption
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- &lt;u&gt;Amenities&lt;/u&gt; `\(b_t(r)\)`: capture &lt;g&gt;non-economic aspects&lt;/g&gt; that affect welfare in `\(r\)`
+
+  - But it is also affected by global warming
+  
+`$$b_t(r) = b_{t-1} \times \underbrace{\Lambda_t^b(r,T_t(r))}_{\text{direct climate damage}}$$`
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- &lt;u&gt;Consumption&lt;/u&gt; `\(C_t(r)\)`: captures utility from consuming a composite of goods
+
+  - It does not depend on worker `\(j\)` type `\(\rightarrow\)` &lt;g&gt;homogeneous workers&lt;/g&gt; w.r.t consumption
+  
+  - No saving/asset accumulation `\(\rightarrow C_t(r) = v_t(r)/P_t(r) \equiv\)` real income at `\(j\)`
+  
+- Preferences are homothetic &lt;r&gt;over one sector only&lt;/r&gt;:
+`$$C_t(r) = \prod_{i=1}^{I} \left[ \int c_{it}^\omega(r)^{\rho}\right]^{\chi_i/\rho} = \left[ \int c_{t}^\omega(r)^{\rho}\right]^{\sigma/\rho}$$`
+where `\(I = 1\)`.
+
+  - `\(\rho = (\sigma-1)/\sigma \equiv\)` CES, `\(\omega \equiv\)` sector `\(i\)` good variety
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- &lt;u&gt;Technology&lt;/u&gt;: production in the economy uses `\(k\)` factors `\(F_{kt}(r) \in \{ \text{labor, land, energy} \}\)`:
+`$$q_{t}^\omega(r) = \underbrace{z_{t}^\omega(r)}_{\text{productivity shifter}} \times \prod_{k} F_{kt}^\omega(r)^{\mu_{k}} = L_{t}^\omega(r)^{\mu_1} \times H_{t}^\omega(r)^{\mu_2} \times e_t^\omega(r)^{1-\mu_1-\mu_2},$$`
+where `\(e_t^\omega(r) \equiv\)` &lt;g&gt;energy used&lt;/g&gt; in production function. Moreover,
+`$$z_{t}^\omega(r) \propto \bar{a}_{t}(r) = \underbrace{\Lambda^a(\Delta T_t(r), T_{t-1}(r))}_{\text{damage function}} \quad \times \underbrace{\tau_{t}(r)}_{\text{(endogenous productivity)}},$$`
+where `\(\tau_{t}(r)\)` is the fundamental `\(i\)`'s productivity in `\(r\)` that &lt;r&gt;depends on innovation&lt;/r&gt;
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- More importantly, `\(e_t^\omega(r)\)` is modeled as a (CES) combination of &lt;r&gt;clean and fossil fuel energy&lt;/r&gt;:
+`$$e_t^\omega(r) = \left( \kappa e_t^{f,\omega}(r)^{\frac{\epsilon-1}{\epsilon}} + (1-\kappa) e_t^{c,\omega}(r)^{\frac{\epsilon-1}{\epsilon}} \right)^{\frac{\epsilon}{\epsilon-1}},$$`
+where `\(e_t^{f,\omega}(r)\)` and `\(e_t^{c,\omega}(r)\)` come from fossil fuel and clean sources, respectively.
+
+- Hence, this CES aggregate implies:
+`$$e_t^{f,\omega}(r)^* \propto \left( \frac{p_t^{f,\omega}(r)}{P_t^{e,\omega}(r)} \right)^{1-\epsilon}$$`
+- `\(p_t^{f,\omega}(r)\)` is the cost of `\(f\)` energy price at `\(r\)`, and `\(P_t^{e,\omega}(r)\)` is the energy price index at `\(r\)`
+
+- &lt;u&gt;Note&lt;/u&gt;: &lt;g&gt;relative prices&lt;/g&gt; of `\(\neq\)` energy sources `\(\rightarrow\)` energy demand
+
+---
+
+# S-IAM: Dynamic Spatial Economy
+
+- Finally, the cost of energy differs across (clean, fossil fuel) types
+`$$p_t^{f,\omega}(r) = \frac{f\left( \text{cummul. CO2}_{t-1} \right)}{\zeta_{t}^{f,\omega}(r)}, \text{ and } p_t^{f,\omega}(r) = \frac{1}{\zeta_{t}^{c,\omega}(r)},$$`
+where `\(\zeta_{t}^{.,\omega}(r)\)` stands for the efficiency of energy types
+
+- `\(f() \rightarrow\)` cost of fossil fuel energy exponentially increases as oil reserves get depleted!
+
+---
+class: inverse, center, middle
+count: false
+
+# S-IAM's Main Ingredients
+
+# Climate Component
+
+---
+
+# S-IAM: Dynamic Climate-Economy Link
+
+- What &lt;g&gt;links the economy and the **global climate**&lt;/g&gt;?
+
+- Energy usage `\(E_t\)` `\(\rightarrow\)` CO2 emissions and stock `\(K_t\)` `\(\rightarrow\)` temperatures `\(T_t\)`:
+`\begin{align}
+K_t &amp;= \varepsilon_1 K_{t-1} + \varepsilon_2 E_t \\
+T_t &amp;= T_{t-1} + \nu \left(K_t - K_{t-1}\right), \text{ where} \\
+E_t &amp;= \int_r \sum_{i}^I E_{it(r)} dr
+\end{align}`
+
+- Then, mapping global global temperatures `\(T_t\)` into &lt;r&gt;local temperatures&lt;/r&gt; `\(T_t(r)\)` with
+`$$T_t(r) - T_{t-1}(r) = \xi(r) \left( T_t - T_{t-1}\right),$$`
+where `\(\xi(r) \equiv\)` downscaling parameter
+
+---
+
+# S-IAM: Dynamic Climate-Economy Link
+
+- Elements &lt;r&gt;quantified&lt;/r&gt; by Cruz and Rossi-Hansberg (2024):
+
+  - `\(\xi(r)\)`: use IPCC forecasts of global and local temperatures for 21st century
+  
+- Another important element is the &lt;g&gt;damage functions&lt;/g&gt; `\(\Lambda^a(\Delta T_t(r), T_{t-1}(r))\)` and `\(\Lambda^b(\Delta T_t(r), T_{t-1}(r))\)`:
+
+  - Semi-parametric approach
+  
+- Cost of extracting fossil fuels `\(f(.)\)`
+  
+- Then, conduct simulations for the coming centuries
+
+  - With and without global warming `\(\rightarrow\)` climate change effects
+
+---
+
+# S-IAM: Dynamic Climate-Economy Link
+
+.center[&lt;img src="figs/cruz_hs_0.png" style="width: 85%" /&gt;
+
+(note: `\(\xi(r)\)` from Cruz and Rossi-Hansberg (2024))]
+
+---
+
+# S-IAM: Dynamic Climate-Economy Link
+
+.pull-left[&lt;img src="figs/cruz_hs_1.png" style="width: 100%" /&gt;
+
+(note: `\(\Lambda^a(\Delta T_t(r), T_{t-1}(r))\)` from Cruz and Rossi-Hansberg (2024))]
+
+.pull-right[&lt;img src="figs/cruz_hs_2.png" style="width: 100%" /&gt;
+
+(note: `\(\Lambda^b(\Delta T_t(r), T_{t-1}(r))\)` from Cruz and Rossi-Hansberg (2024))]
+
+---
+
+# S-IAM: Dynamic Climate-Economy Link
+
+.center[&lt;img src="figs/cruz_hs_3.png" style="width: 50%" /&gt;
+
+(note: `\(f\left( \text{cummul. CO2}_{t} \right)\)` from Cruz and Rossi-Hansberg (2024))]
+
+---
+class: inverse, center, middle
+count: false
+
+# Main results and takeaways from
+
+# Cruz and Rossi-Hansberg (2024)
+
+---
+
+# The Economic Geography of Global Warming
+
+Main results over three different margins
+
+- &lt;g&gt;Evolution of climate and economy&lt;/g&gt; over time and space
+
+  - What will the welfare losses of global warming be?
+  
+- Importance of &lt;r&gt;adaptation channels&lt;/r&gt;:
+
+  - How relevant are migration, trade, and innovation decisions when mitigating losses?
+  
+- Role of &lt;y&gt;climate policy&lt;/y&gt;?
+
+  - How would clean energy subsidies, CO2 taxes, or improved abatement interact with these results?
+  
+---
+
+# The Economic Geography of Global Warming
+
+## Evolution of climate
+
+.center[&lt;img src="figs/cruz_hs_5.png" style="width: 85%" /&gt;]
+
+---
+
+# The Economic Geography of Global Warming
+
+## Productivity and amenity changes due to global warming
+
+.center[&lt;img src="figs/cruz_hs_6.png" style="width: 85%" /&gt;]
+
+---
+
+# The Economic Geography of Global Warming
+
+## Welfare losses due to global warming
+
+.center[&lt;img src="figs/cruz_hs_7.png" style="width: 85%" /&gt;]
+
+---
+
+# The Economic Geography of Global Warming
+
+## Effects of migration policy (higher migration barriers)
+
+.center[&lt;img src="figs/cruz_hs_8.png" style="width: 85%" /&gt;]
+
+---
+
+# The Economic Geography of Global Warming
+
+## Effect of global CO2 taxes
+
+.center[&lt;img src="figs/cruz_hs_9.png" style="width: 85%" /&gt;]
+
+---
+class: inverse, center, middle
+count: false
+
+# That is it - Thank you!
+
+
+---
+
+# References
+
+- Carleton, T., Crews, L. and Nath, I., 2023. Agriculture, trade, and the spatial efficiency of global water use. *Working Paper*.
+
+- Copeland, B.R. and Taylor, M.S., 2004. Trade, growth, and the environment. *Journal of Economic Literature*, 42(1), pp.7-71.
+
+- Copeland, B.R., Shapiro, J.S. and Taylor, M.S., 2022. Globalization and the environment. In *Handbook of International Economics* (Vol. 5, pp. 61-146). Elsevier.
+
+- Debaere, P., 2014. The global economics of water: is water a source of comparative advantage?. *American Economic Journal: Applied Economics*, 6(2), pp.32-48.
+
+- Dekle, R., Eaton, J. and Kortum, S., 2008. Global rebalancing with gravity: Measuring the burden of adjustment. *IMF staff papers*, 55(3), pp.511-540.
+
+- Grossman, G.M. and Krueger, A.B., 1991. Environmental impacts of a North American free trade agreement. NBER WP 3941.
+
+---
+
+# References
+
+- Grossman, G.M. and Krueger, A.B., 1995. Economic growth and the environment. *The Quarterly Journal of Economics*, 110(2), pp.353-377.
+
+- Farrokhi, F., Kang, E., Pellegrina, H.S. and Sotelo, S., 2023. *Deforestation: A global and dynamic perspective*. Working Paper.
+
+- Hsiao, A., 2023. Coordination and commitment in international climate action: evidence from palm oil. *Working Paper*.
+
+- Shapiro, J.S., 2016. Trade costs, CO2, and the environment. *American Economic Journal: Economic Policy*, 8(4), pp.220-254.
+
+- Shapiro, J.S., 2021. The environmental bias of trade policy. *The Quarterly Journal of Economics*, 136(2), pp.831-886.
+
+---
+
+# References
+
+- Shapiro, J.S., 2023. Institutions, Comparative Advantage, and the Environment (No. w31768). *National Bureau of Economic Research*.
+
+- Shapiro, J.S. and Walker, R., 2018. Why is pollution from US manufacturing declining? The roles of environmental regulation, productivity, and trade. *American Economic Review*, 108(12), pp.3814-3854.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
