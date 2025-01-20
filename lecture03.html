@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Climate Adaptation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Bruno Conte" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer-bse.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: center, middle
+
+&lt;style&gt;
+g { color: rgb(0,130,155) }
+r { color: rgb(174,77,41) }
+y { color: rgb(177,148,40) }
+&lt;/style&gt;
+
+# Week 03: Climate Adaptation
+
+## &lt;img src="https://brunoconteleite.github.io/08-geospatial-ds-bse/figs/bse_primary_logo.png" style="width: 35%" /&gt;&lt;br&gt;&lt;br&gt;Bruno Conte
+
+## 21/Jan/2025
+
+---
+
+# Climate Change and Climate Adaptation: Intro
+
+- So far, we have studied &lt;g&gt;economic causes&lt;/g&gt; of climate change (Facts 1 to 3, Class 01)
+
+  - Humans `\(\rightarrow\)` economy `\(\rightarrow\)` `\(\text{CO}_{2}\)` emissions `\(\rightarrow\)` higher temperatures
+
+- We have also learned how economists measure the economic impacts of `\(\text{C}\Delta\)`
+
+
+- However, climate damages span along &lt;r&gt;many dimensions&lt;/r&gt; (heatwaves, coastal flooding, ...)
+
+  - And so do related adaptation policies, their trade-offs, and frictions
+
+--
+
+`\(\text{ }\)`
+    
+&lt;u&gt;This class:&lt;/u&gt; &lt;y&gt;**how are we (or should be) adapting to `\(\text{C}\Delta\)`, and how costly is that?**&lt;/y&gt;
+
+---
+
+# Climate Change and Climate Adaptation: Intro
+
+- Adaptation approach looks from a different perspective: it takes **climate change as given**
+
+- Complementary to mitigating policies whose aim is to reduce `\(\text{CO}_2\)` emissions
+
+  - Actually, sinergies with mitigation is an assessment criterion (more on that later)
+
+--
+
+&lt;br&gt;
+
+- &lt;u&gt;Why is adaptation important?&lt;/u&gt;
+
+  - Intertemporal &lt;g&gt;timespan&lt;/g&gt; of mitigating policies
+  
+  - Unequal and &lt;r&gt;multidimensional&lt;/r&gt; aspects of climate damages
+  
+  - &lt;y&gt;Link with UN's SDG&lt;/y&gt; that are not linked to `\(\downarrow \text{CO}_2\)`
+
+---
+count: false
+
+# Climate Change and Climate Adaptation: Intro
+
+- Adaptation approach looks from a different perspective: it takes **climate change as given**
+
+- Complementary to mitigating policies whose aim is to reduce `\(\text{CO}_2\)` emissions
+
+  - Actually, sinergies with mitigation is an assessment criterion (more on that later)
+
+&lt;br&gt;
+
+- &lt;u&gt;Why is adaptation important?&lt;/u&gt;
+
+  - Intertemporal &lt;g&gt;timespan&lt;/g&gt; of mitigating policies (e.g., pathway targets?)
+  
+  - Unequal and &lt;r&gt;multidimensional&lt;/r&gt; aspects of climate damages (e.g., `\(\downarrow\)` agric. yields?)
+  
+  - &lt;y&gt;Link with UN's SDG&lt;/y&gt; that are not linked to `\(\downarrow \text{CO}_2\)` (e.g., zero hunger, sustainable cities)
+
+---
+
+# Climate Adaptation: Standards and Definitions
+
+&lt;u&gt;Definition&lt;/u&gt; according to IPCC (2022):
+
+&gt; *"&lt;r&gt;Climate adaptation&lt;/r&gt; is the process of adjustment to actual or expected climate and its effects, in order to &lt;g&gt;moderate harm&lt;/g&gt; or exploit beneficial oportunities"*
+
+--
+
+- Climate harms/impacts are multidimensional, and so are adaptation margins
+  
+  - A/C or green cities for extreme heat in dense urban areas
+  
+  - Improved farming techniques (irrigation, machinery, and seeds) in rural economies
+  
+  - Migration from hazardous to safer areas
+
+--
+
+- Each of these solutions generates benefits, &lt;y&gt;but potentially damages&lt;/y&gt; (e.g., A/C or migration)
+
+  - This is particularly important due to the uneven spatial patterns of climate impacts!
+
+---
+
+# Multidimensionality of climate impacts and adaptation
+
+&lt;img src="figs/multidim_1.png" style="width: 85%" /&gt;&lt;img src="figs/multidim_2.png" style="width: 12%" /&gt;
+
+---
+
+# Climate Impacts and Adaptation: Measure
+
+How to measure **climate impacts** and the **attenuating role of adaptation** margins?
+
+From early 2000s, evidence-based studies on; &lt;u&gt;challenges&lt;/u&gt;:
+
+--
+
+- &lt;g&gt;Econometric:&lt;/g&gt; climate change is slowly happening, and not fully realized
+
+  - Distinction between weather and climate (changes)! 
+
+- Short- versus &lt;y&gt;long-run perspective:&lt;/y&gt;
+
+  - Evidence from short time windows (few years)
+  
+  - Policy requires long-run projections (several decades)
+  
+- How to account for (costs of) &lt;r&gt;endogenous adaptation?&lt;/r&gt;
+
+--
+
+&lt;u&gt;Roadmap:&lt;/u&gt; `\(\text{C}\Delta\)` damages+adaptation (agriculture, coastal flooding, costs of adaptation)
+
+---
+class: inverse, center, middle
+count: false
+
+# Climate Change Adaptation in
+
+# Agriculture
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+&lt;u&gt;Agriculture has been at the spotlight:&lt;/u&gt; very sensitive to weather and climate changes
+
+  - It also brought many empirical methodological advances
+
+--
+
+**&lt;g&gt;Cross-sectional approach&lt;/g&gt;**
+
+Mendelsohn et al. (1994) proposed a "hedonic approach" for &lt;y&gt;climate effects on agriculture&lt;/y&gt;
+
+$$
+y_i = \alpha + \beta C_i + \gamma X_i + \epsilon_i,
+$$
+- `\(y_i \equiv\)` land prices (why?) in US county `\(i\)`. What is the *source of identifying variation*?
+
+--
+
+- `\(C_i\)` long-term climate characteristics (why?); `\(X_i \equiv\)` controls (see Dell et al., 2014)
+
+--
+
+- `\(\beta\)` + future climate = small climate change effects in the US
+  
+- Schenkler et al. (2005) shows that &lt;r&gt;adaptation as irrigation&lt;/r&gt; `\(\rightarrow\)` negative bias (why?)
+  - Estimates for drylands alone are sizeable and robust!
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+Deschenes and Greenstone (2007) proposed a **&lt;g&gt;weather shock (panel) approach&lt;/g&gt;**
+
+`$$y_{it} = \beta C_{it} + \gamma X_{it} + \mu_i + \theta_t + \epsilon_{it}$$`
+- `\(\mu_i\)` and `\(\theta_t\)` are county and time fixed effects, respectively, and `\(t \equiv\)` year
+
+  - What is the source of *identification variation*?
+  
+  - Why does `\(\beta\)` capture the effect of weather (and not climate) shocks?
+
+- This framework inspired an immense literature on climate effects (see [&lt;u&gt;Kala et al., 2023&lt;/u&gt;](https://voxdev.org/voxdevlit/climate-adaptation))
+
+--
+
+- It was further extended to account for long-term (and/or general equilibrium) effects
+
+  - Idea: use long-term (say, decadal) changes in `\(C_i\)`
+  
+  - Why does it help accounting for adaptation?
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+Example: Burke and Emerick (2016):
+`$$y_{it} = \beta C_{it} + \gamma X_{it} + \mu_i + \theta_t + \epsilon_{it}$$`
+`$$\Delta y_{i} = \alpha \Delta C_{i} + \gamma \Delta X_{i} + \epsilon_{it}$$`
+
+Idea: similar short-run and long-term estimates `\((\hat{\alpha}=\hat{\beta})\)` = &lt;g&gt;no adaptation&lt;/g&gt; (why?)
+
+--
+
+Inspired studies on &lt;y&gt;specific margins&lt;/y&gt; of adjustment; for example:
+
+- &lt;u&gt;Land reallocation:&lt;/u&gt; switch to relatively less affected sectors (e.g., livestock, resilient crops)
+
+  - Hornbeck (2012): no evidence of reallocation as adaptation in the US (but of migration)
+
+- &lt;u&gt;Irrigation:&lt;/u&gt; 
+
+  - Crucial for shock coping (Fishman, 2018; Taraz, 2017); related to groundwater depletion (Hornbeck and Keskin, 2014)
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+Other papers have study &lt;y&gt;specific margins&lt;/y&gt; of adjustment:
+
+- &lt;u&gt;Better practices, tech. adoption and financial products&lt;/u&gt; (see Kala et al., 2023, Section III)
+
+  - Limited evidence (information frictions and insufficient credit markets)
+  
+--
+
+- &lt;u&gt;Migration as adaptation&lt;/u&gt; (idea: &lt;g&gt;last resort due to costly adaptation&lt;/g&gt;; Hornbeck, 2012)
+
+  - Deschenes and Moretti (2009): attenuated mortality effects in the US
+
+  - Cai et al. (2016): strong effects on international migration from agricultural countries
+  
+  - Groeger and Zylberberg (2016): urban migration as risk-coping in Vietnam
+
+  - &lt;r&gt;Liu et al. (2023):&lt;/r&gt; more agric. employment and less urbanization in Indian districts
+  
+  - &lt;r&gt;Henderson et al. (2017):&lt;/r&gt; urbanization increased in SSA only in manufacturing cities (and not in market cities)
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+Liu et al. (2023): demand-side effects of (long-term) climate shocks
+
+.pull-left[
+- Higher temperatures, less agric. income
+
+  - `\(\downarrow\)` demand for non-agricultural goods
+  
+  - Climate change `\(\rightarrow\)` obstacle for structural change!
+
+]
+.pull-right[
+&lt;img src="figs/fig_adaptation_liu_india1.png" style="width: 85%" /&gt;
+]
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+Liu et al. (2023): demand-side effects of (long-term) climate shocks
+
+.pull-left[
+- Higher temperatures, less agric. income
+
+  - `\(\downarrow\)` demand for non-agricultural goods
+  
+  - Climate change `\(\rightarrow\)` obstacle for structural change!
+
+`$$\Delta y_{i} = \alpha \Delta T_{i} + \gamma \Delta P_{i} + \epsilon_{i}$$`
+- `\(\Delta T_{i} \equiv\)` long-term temperature changes
+
+- `\(\Delta P_{i} \equiv\)` precipitation (control)
+
+]
+.pull-right[
+&lt;img src="figs/fig_adaptation_liu_india2.png" style="width: 85%" /&gt;
+]
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+Liu et al. (2023): demand-side effects of (long-term) climate shocks
+
+.pull-left[
+- Higher temperatures, less agric. income
+
+  - `\(\downarrow\)` demand for non-agricultural goods
+  
+  - Climate change `\(\rightarrow\)` obstacle for structural change!
+
+Stronger effects on &lt;g&gt;developed `\(D_i\)` districts&lt;/g&gt;
+
+`$$\Delta y_{i} = \alpha \Delta T_{i} + \theta D_i \times \Delta T_{i} + \gamma \Delta P_{i} + \epsilon_{i}$$`
+
+Vulnerable districts drive the results!
+
+]
+.pull-right[
+&lt;img src="figs/fig_adaptation_liu_india3.png" style="width: 85%" /&gt;
+]
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+Henderson et al. (2017): heterogeneous effects in SSA (using a similar empirical setting)
+
+.pull-left[
+- `\(\Delta\)` moisture `\(\rightarrow\)` agricultural shock
+
+  - Urbanization decreases, mostly in market cities
+  
+  - But less so for manufacturing and exporting cities
+
+- What is the &lt;u&gt;underlying mechanism&lt;/u&gt;?
+
+
+]
+.pull-right[
+&lt;img src="https://brunoconteleite.github.io/08-geospatial-ds-bse/figs/henderson01.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+Henderson et al. (2017): heterogeneous effects in SSA (using a similar empirical setting)
+
+.pull-left[
+- `\(\Delta\)` moisture `\(\rightarrow\)` agricultural shock
+
+  - Urbanization decreases, mostly in market cities
+  
+  - But less so for manufacturing and exporting cities
+
+- What is the &lt;u&gt;underlying mechanism&lt;/u&gt;?
+
+
+]
+.pull-right[
+&lt;img src="figs/fig_adaptation_henderson1.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+Henderson et al. (2017): heterogeneous effects in SSA (using a similar empirical setting)
+
+.pull-left[
+- `\(\Delta\)` moisture `\(\rightarrow\)` agricultural shock
+
+  - Urbanization decreases, mostly in market cities
+  
+  - But &lt;g&gt;less so for manufacturing&lt;/g&gt; and exporting cities
+
+- What is the &lt;u&gt;underlying mechanism&lt;/u&gt;?
+
+  - Exporting cities do not rely on agricultural income (import food)
+  
+  - Relates to &lt;r&gt;structural transformation!&lt;/r&gt;
+
+
+]
+.pull-right[
+&lt;img src="figs/fig_adaptation_henderson1.png" style="width: 100%" /&gt;
+]
+
+---
+
+# Climate Effects and Adaptation in Agriculture
+
+Henderson et al. (2017): heterogeneous effects in SSA (using a similar empirical setting)
+
+.pull-left[
+- `\(\Delta\)` moisture `\(\rightarrow\)` agricultural shock
+
+  - Urbanization decreases, mostly in market cities
+  
+  - But &lt;g&gt;less so for manufacturing&lt;/g&gt; and exporting cities
+
+- What is the &lt;u&gt;underlying mechanism&lt;/u&gt;?
+
+  - Exporting cities do not rely on agricultural income (import food)
+  
+  - Relates to &lt;r&gt;structural transformation!&lt;/r&gt;
+
+
+]
+.pull-right[
+
+&lt;u&gt;Structural change&lt;/u&gt; as adaptation:
+
+- Industrialization `\(\rightarrow\)` lower vulnerability
+
+- Economies need to meet subsistence
+
+  - Trade barriers `\(\rightarrow\)` importing food is limited (the "food problem")
+  
+- Ishan (2023): &lt;y&gt;food problem exarcebates welfare losses&lt;/y&gt; in poor countries
+
+  - Lower agric. productivity: more agricultural employment (why?)
+
+]
+
+---
+
+# Cl. Effects and Adaptation in Agriculture: Taking stock (1/2)
+
+- Climate adaptation policy: &lt;g&gt;central piece on global policy&lt;/g&gt; against climate change
+
+  - Evidence so far: limited implementation, especially on developing, vulnerable economies (adaptation gap)
+  
+- Evidence-based research since 2000s:
+
+  - Abundant studies on vulnerability of (and adaptation in) agriculture
+  
+  - Many &lt;r&gt;methodological advances&lt;/r&gt; to infer short- and long-run adaptation
+  
+  - Takeaways: inefficiencies in the economies hinder adoptation of adaptative actions
+  
+  - Migration and urbanization (structural change) have &lt;y&gt;limited scope&lt;/y&gt; as adaptation
+
+---
+
+# Cl. Effects and Adaptation in Agriculture: Taking stock (2/2)
+
+Importantly, these studies focused on &lt;u&gt;monetary outcomes&lt;/u&gt;
+
+- &lt;r&gt;Adaptation costs&lt;/r&gt; are straight-forward: $ cost of building roads, setting credit systems, etc
+
+--
+
+&lt;br&gt;
+
+However, how to measure impacts of &lt;g&gt;non-monetary outcomes&lt;/g&gt;?
+
+- How to also account for the (hidden) &lt;y&gt;adaptation costs&lt;y/&gt;?
+
+&lt;u&gt;Next&lt;/u&gt;: case of mortality `\(\text{C}\Delta\)` effects from Carleton et al. (2022)
+
+---
+class: inverse, center, middle
+count: false
+
+# Global Mortality Costs of Climate Change
+
+# Accounting for Adaptation
+
+---
+
+# Global Mortality Costs of Cl. Change
+
+Carleton et al. (2022) "*Valuing the global mortality consequences of climate change accounting for adaptation costs and benefits*"
+
+1. Infer &lt;g&gt;age-specific&lt;/g&gt; mortality-temperature relationship accounting for adaptation
+
+  - Damage function: maps climate damages `\(\rightarrow\)` monetary units
+  
+2. Calculate the &lt;r&gt;underlying monetary cost&lt;/r&gt; of (unobserved) adaptation
+
+  - Intuition: "Total cost" = mortality cost + adaptation cost
+  
+3. Uses estimated costs to update the &lt;y&gt;social cost of CO2&lt;/y&gt; associated to mortality
+
+  - Mortality costs + adaptation benefits - adaptation costs = $ (social) cost of CO2 emissions
+
+---
+
+# Global Mortality Costs of Cl. Change: Conceptual Framework
+
+&lt;u&gt;Conceptual framework&lt;/u&gt;: how does temperature affect mortality risk?
+
+- Empirical methods `\(\rightarrow\)` causal effect of temperature on deaths
+
+More importantly (and challenging): how to account for &lt;g&gt;hidden adaptation choices&lt;g&gt; in observational studies?
+
+- Climate and weather: joint distribution `\(\mathbf{C}\)` of weather realizations `\(\mathbf{c}\)`
+
+- &lt;r&gt;Mortality risk&lt;/r&gt;: `\(f \equiv f (\mathbf{c}, \mathbf{b})\)`, where
+
+- `\(\mathbf{b} \equiv \{ b_q, ..., b_K \}\)` is a composite of `\(K\)` choice variables that affect mortality risk (i.e., adaptation) that depends on income `\(Y\)`
+  
+- Important: income `\(Y\)` is exogenous!
+ 
+---
+
+# Global Mortality Costs of Cl. Change: Conceptual Framework
+
+Hence, mortality risk at period `\(t\)` is
+`$$P(\text{death} | Y_{t}, \mathbf{C}_t) = f(\mathbf{b}(Y_{t}, \mathbf{C}_t), \mathbf{c}(\mathbf{C}_t))$$`
+
+where `\(\mathbf{b}(Y_{t}, \mathbf{C}_t) \rightarrow\)` adaptation depends on income and &lt;g&gt;on climate&lt;/g&gt;
+
+Hence, between periods `\(t0\)` and `\(t\)`, the &lt;r&gt;mortality effect of climate change&lt;/r&gt; is
+`$$f(\mathbf{b}(Y_{t}, \mathbf{C}_t), \mathbf{c}(\mathbf{C}_t)) - f(\mathbf{b}(Y_{t}, \mathbf{C}_{t0}), \mathbf{c}(\mathbf{C}_{t0})) \quad \quad (1)$$`
+Question: why is `\(Y_t\)` fixed?
+
+---
+
+# Global Mortality Costs of Cl. Change: Conceptual Framework
+
+Moreover, the mortality effects of climate change &lt;r&gt;*without income growth or adaptation*&lt;/r&gt; are
+`$$f(\mathbf{b}(Y_{t0}, \mathbf{C}_{t0}), \mathbf{c}(\mathbf{C}_t)) - f(\mathbf{b}(Y_{t0}, \mathbf{C}_{t0}), \mathbf{c}(\mathbf{C}_{t0})) \quad \quad (2)$$`
+- It shuts down the possibility that agents adapt through `\(\mathbf{b}\)`
+
+- Captures only the effects of the changes in weather realizations `\(\mathbf{c}\)` in different climates
+
+Analogoulsy, the mortality effects of climate change &lt;g&gt;*without adaptation only*&lt;/g&gt; are
+`$$f(\mathbf{b}(Y_{t}, \mathbf{C}_{t0}), \mathbf{c}(\mathbf{C}_t)) - f(\mathbf{b}(Y_{t}, \mathbf{C}_{t0}), \mathbf{c}(\mathbf{C}_{t0})) \quad \quad (3)$$`
+- Allows for "adaptation" to happen through `\(Y\)` changes, but shuts down climate adaptation!
+
+---
+
+# Global Mortality Costs of Cl. Change: Conceptual Framework
+
+- Actual mortality effect (and empirical focus) is on the estimation of (1)
+
+  - However, differences when estimating (2) and (3) show the importance of each channel
+  
+- Moreover, the &lt;r&gt;full monetary (mortality) burden of climate change&lt;/r&gt; is
+`$$VSL_t \times \left[ f(\mathbf{b}(Y_{t}, \mathbf{C}_t), \mathbf{c}(\mathbf{C}_t)) - f(\mathbf{b}(Y_{t}, \mathbf{C}_{t0}), \mathbf{c}(\mathbf{C}_{t0})) \right] - \\ A \left( \mathbf{b}(Y_{t}, \mathbf{C}_t) \right) - A \left( \mathbf{b}(Y_{t}, \mathbf{C}_{t0}) \right),\text{ where}$$`
+
+- `\(VSL_t\)` is the value of a statistical life in monetary terms
+
+- `\(A \left( \mathbf{b}(Y_{t}, \mathbf{C}_t) \right)\)` is the monetary cost of adaptation level `\(\mathbf{b}\)`
+
+---
+class: inverse, center, middle
+count: false
+
+# Estimating the Global Mortality Costs
+
+# of Climate Change Accounting for Adaptation
+
+---
+
+# Global Mortality Costs of Climate Change: Estimation
+
+To estimate &lt;r&gt;mortality effects of climate change&lt;/r&gt; (equation 1)
+`$$f(\mathbf{b}(Y_{t}, \mathbf{C}_t), \mathbf{c}(\mathbf{C}_t)) - f(\mathbf{b}(Y_{t}, \mathbf{C}_{t0}), \mathbf{c}(\mathbf{C}_{t0})) \quad \quad (1)$$`
+Carleton uses the following model:
+`$$M_{ait} = g_a\left( \mathbf{T}_{it}, T\text{ }MEAN_s, \log(GDPpc)_s \right) + q_{ca}\left( \mathbf{R}_{it}\right) + \alpha_{ai} + \delta_{act} + \varepsilon_{ait}$$`
+- `\(a \equiv\)` age, `\(i \equiv\)` AMD2, `\(s \equiv\)` ADM1, `\(c \equiv\)` country, and `\(t \equiv\)` time
+
+- `\(\mathbf{T}_t \equiv\)` fourth-order polynomial of yearly temperature
+
+- `\(g_a(.) \equiv \mathbf{T}_t \times T\text{ }MEAN_s \times \log(GDPpc)_s\)`
+
+Hence, &lt;g&gt;identification comes&lt;/g&gt; from random weather (year-to-year) variation in `\(\mathbf{c}(\mathbf{C}_t) = \mathbf{T}_t\)`
+
+- Climate change "effects" come from &lt;y&gt;cross-sectional variation&lt;/y&gt; in `\(\mathbf{C}_t = T\text{ }MEAN_s\)`
+
+---
+
+# Global Mortality Costs of Climate Change: Data
+
+.center[&lt;img src="figs/carleton_data.png" style="width: 85%" /&gt;]
+
+---
+
+# Global Mortality Costs of Climate Change: (some) Results
+
+.center[&lt;img src="figs/carleton_results1.png" style="width: 65%" /&gt;]
+
+---
+
+# Global Mortality Costs of Climate Change: Projections
+
+The estimated `\(\hat{g}_a()\)` that &lt;u&gt;can be fitted&lt;/u&gt; to any data for predictions/projections
+
+1. For instance, to estimate mortality effects in &lt;g&gt;out-of-sample regions&lt;/g&gt;
+
+2. Or the &lt;r&gt;future impact of climate change&lt;/r&gt; in terms of (changes in) mortality rates
+
+3. Also, to &lt;y&gt;disentangle the adaptation benefits and costs&lt;/y&gt; (eqs. 2 and 3)
+
+---
+
+# Global Mortality Costs of Climate Change: Projections
+.pull-left[
+
+For out-of-sample projections (1), &lt;r&gt;extrapo- late estimates to other regions&lt;/r&gt; using income and climate data
+
+Careful &lt;g&gt;account for uncertainty&lt;/g&gt; (econo- metric and climate)
+
+- Monte Carlo simulations (~94K CPU h!)
+
+- Figure: impact of a 35C day in 2015
+
+]
+.pull-right[&lt;img src="figs/carleton_results4.png" style="width: 100%" /&gt;]
+
+---
+
+# Global Mortality Costs of Climate Change: Projections
+
+Similarly, use the `\(\hat{g}_a()\)` for inferring &lt;r&gt;future climate change impacts&lt;/r&gt; (2)
+`$$\text{mortality effects of climate change} = \hat{g}_a(\mathbf{T}_t, T\text{ }MEAN_t, \log(GDPpc)_t) \\ \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad - \hat{g}_a(\mathbf{T}_{t0}, T\text{ }MEAN_{t0}, \log(GDPpc)_{t})$$`
+where `\(t0 \equiv\)` 2001-2010 and `\(t \equiv\)` future year(s).
+
+---
+
+# Global Mortality Costs of Climate Change: Projections
+
+.center[&lt;img src="figs/carleton_results2.png" style="width: 85%" /&gt;]
+
+---
+
+# Global Mortality Costs of Climate Change: Projections
+
+Finally, use `\(\hat{g}_a()\)` to disentangle the &lt;g&gt;role of climate adaptation and income growth&lt;/g&gt; (3)
+`$$\quad$$`
+`$$\text{mortality effects (no income growth of adaptation)} = \hat{g}_a(\mathbf{T}_t, T\text{ }MEAN_{t0}, \log(GDPpc)_{t0}) \\ \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad - \hat{g}_a(\mathbf{T}_{t0}, T\text{ }MEAN_{t0}, \log(GDPpc)_{t0})$$`
+Holding `\(T\text{ }MEAN_{t0}\)` and `\(\log(GDPpc)_{t0}\)` fixed imply fixing `\(\mathbf{b}(Y,\mathbf{C})\)` to baseline. Analogously,
+
+`$$\quad$$`
+`$$\text{mortality effects (no adaptation)} = \hat{g}_a(\mathbf{T}_t, T\text{ }MEAN_{t0}, \log(GDPpc)_{t}) \\ \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad - \hat{g}_a(\mathbf{T}_{t0}, T\text{ }MEAN_{t0}, \log(GDPpc)_{t})$$`
+
+---
+
+# Global Mortality Costs of Climate Change: Projections
+
+.center[&lt;img src="figs/carleton_results3.png" style="width: 85%" /&gt;]
+
+---
+class: inverse, center, middle
+count: false
+
+# Estimating the Unobserved Costs
+
+# of Climate Adaptation
+
+---
+
+# Unobserved Costs of Climate Adaptation
+
+- The set of `\(\mathbf{b}\)` adaptation choices is impossible to be observed (and quantified)
+
+- Hence, Carleton resorts to a &lt;g&gt;revealed preferences approach&lt;/g&gt;
+
+- Idea: under (many) assumptions, adaptation takes place until marginal cost of adapting equals benefits (avoided deaths):
+`$$\frac{\partial A(\mathbf{b})}{\partial \mathbf{b}} = -VSL_t \frac{\partial f (\mathbf{b})}{\partial \mathbf{b}},\text{ hence}$$`
+`$$A(\mathbf{b}(Y_t, \mathbf{C}_t)) - A(\mathbf{b}(Y_t, \mathbf{C}_{t0})) = - \sum_{t0}^t VSL_t \left( \frac{\partial \hat{g}}{\partial T\text{ }MEAN_{t}} \right) \times (T\text{ }MEAN_{t} - T\text{ }MEAN_{t0})$$`
+is future cost of adaptation. Divided by `\(VSL\)`, it becomes a "death-equivalent" measure (avoided deaths)
+
+---
+
+# Unobserved Costs of Climate Adaptation
+
+.center[&lt;img src="figs/carleton_results5.png" style="width: 85%" /&gt;]
+
+---
+
+# Climate Adaptation: Takeaways
+
+- With monetary value of mortality costs (accounting for benefits and costs of adaptation), Carleton et al. (2022) provides SSC of mortality
+
+- Climate adaptation is costly and sizeable
+
+- Adaptation costs puts a larger burden in low-income economies
+
+- High income economies benefit from changes, but also incur in large adaptation investments
+
+- Much more to learn from that paper, read it in detail if interested!
+
+---
+class: inverse, center, middle
+count: false
+
+# See you next class!
+
+---
+class: inverse, center, middle
+count: false
+
+# See you next class!
+
+
+---
+
+# References
+
+- Balboni, C (2021), "In Harm’s Way? Infrastructure Investments and the Persistence of Coastal Cities", Working Paper.
+
+- Burke, M. and Emerick, K., 2016. Adaptation to climate change: Evidence from US agriculture. *American Economic Journal: Economic Policy*, 8(3), pp.106-140.
+
+- Cai, R., Feng, S., Oppenheimer, M. and Pytlikova, M., 2016. Climate variability and international migration: The importance of the agricultural linkage. *Journal of Environmental Economics and Management*, 79, pp.135-151.
+
+- Carleton, T., Jina, A., Delgado, M., Greenstone, M., Houser, T., Hsiang, S., Hultgren, A., Kopp, R.E., McCusker, K.E., Nath, I. and Rising, J., 2022. Valuing the global mortality consequences of climate change accounting for adaptation costs and benefits. The Quarterly Journal of Economics, 137(4), pp.2037-2105.
+
+- Costinot, A., Donaldson, D. and Smith, C., 2016. Evolving comparative advantage and the impact of climate change in agricultural markets: Evidence from 1.7 million fields around the world. *Journal of Political Economy*, 124(1), pp.205-248.
+
+---
+
+# References
+
+- Dell, M., Jones, B.F. and Olken, B.A., 2014. What do we learn from the weather? The new climate-economy literature. *Journal of Economic Literature*, 52(3), pp.740-798.
+
+- Deschenes, O. and Greenstone, M., 2007. The economic impacts of climate change: evidence from agricultural output and random fluctuations in weather. *American economic review*, 97(1), pp.354-385.
+
+- Deschenes, O. and Moretti, E., 2009. Extreme weather events, mortality, and migration. *The Review of Economics and Statistics*, 91(4), pp.659-681.
+
+- Desmet, K, R E Kopp, S A Kulp, D K Nagy, M Oppenheimer, E Rossi-Hansberg, and B H Strauss (2021), "Evaluating the Economic Cost of Coastal Flooding", *American Economic Journal: Macroeconomics*, 13(2): 444–486.
+
+- Fishman, R. 2018, Groundwater Depletion Limits the Scope for Adaptation to Increased Rainfall Variability in India. *Climatic Change*, 147: 195–209.
+
+- Fried, S., 2022. Seawalls and stilts: A quantitative macro study of climate adaptation. *The Review of Economic Studies*, 89(6), pp.3303-3344.
+
+---
+
+# References
+
+- Groeger, A. and Zylberberg, Y., 2016. Internal labor migration as a shock coping strategy: Evidence from a typhoon. *American Economic Journal: Applied Economics*, 8(2), pp.123-153.
+
+- Henderson, J V, A Storeygard, and U Deichmann (2017), "Has Climate Change Driven Urbanization in Africa?" *Journal of Development Economics*, 124: 60–82.
+
+- Hornbeck, R., 2012. The enduring impact of the American Dust Bowl: Short-and long-run adjustments to environmental catastrophe. *American Economic Review*, 102(4), pp.1477-1507.
+
+- Hornbeck, R. and Keskin, P., 2014. The historically evolving impact of the ogallala aquifer: Agricultural adaptation to groundwater and drought. *American Economic Journal: Applied Economics*, 6(1), pp.190-219.
+
+- Hsiao, A., 2023. Sea Level Rise and Urban Adaptation in Jakarta. Working paper.
+
+- Kala, N., Balboni, C. and Bhogale, S., 2023. Climate Adaptation. *VoxDevLit*, 7, p.3.
+
+---
+
+# References
+
+- Liu, M, Y Shamdasani, and V Taraz (2023), "Climate Change and Labor Reallocation: Evidence From Six Decades of the Indian Census," *American Economic Journal: Economic Policy*, 15(2): 395-423.
+
+- Mendelsohn, R., Nordhaus, W.D. and Shaw, D., 1994. The impact of global warming on agriculture: a Ricardian analysis. *The American Economic Review*, pp.753-771.
+
+- Nath, I (2022), "Climate Change, The Food Problem, and the Challenge of Adaptation through Sectoral Reallocation", Working Paper.
+
+- Neufeldt, H., Christiansen, L. and Dale, T.W., 2020. Adaptation gap report 2020.
+
+- Portner, H., Roberts, D.C., Parmesan, C., Adams, H., Adelekan, I., Adler, C., Adrian, R., Aldunce, P., Ali, E., Ara, R. and Bednar-Friedl, B., 2022. *IPCC 2022: Technical Summary, Working Group II Impacts, Adaptation and Vulnerability*.
+
+- Taraz, V. 2017. Adaptation to Climate Change: Historical Evidence From the Indian Monsoon. *Environment and Development Economics*, 22(5): 517–545.
+
+---
+
+# References
+
+- Schlenker, W., Michael Hanemann, W. and Fisher, A.C., 2005. Will US agriculture really benefit from global warming? Accounting for irrigation in the hedonic approach. *American Economic Review*, 95(1), pp.395-406.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
